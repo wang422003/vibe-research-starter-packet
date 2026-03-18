@@ -22,6 +22,7 @@ If you only have 30 minutes today: read Paper #1 + #4 + #12.
 - [What is Vibe Research?](#what-is-vibe-research)
 - [Who is this for?](#who-is-this-for)
 - [Awesome-Style Route Cards](#awesome-style-route-cards)
+- [Visual Route Map](#visual-route-map)
 - [30-Second Quickstart](#30-second-quickstart)
 - [Recommended Reading Path](#recommended-reading-path)
 - [Legend](#legend)
@@ -79,6 +80,31 @@ Pick one route based on your goal. Each route gives you a focused paper stack an
 - Evaluate with: [ScienceAgentBench](https://arxiv.org/abs/2410.05080), [FIRE-Bench](https://arxiv.org/abs/2602.02905), [AstaBench](https://arxiv.org/abs/2510.21652)
 - Next action: Define one hypothesis and one benchmark-backed evaluation protocol
 - Jump to: [Research Ideation](#3-research-ideation), [Benchmark and Evaluation](#5-benchmark-and-evaluation)
+
+## Visual Route Map
+
+A quick map from visitor intent to reading categories and concrete actions:
+
+```mermaid
+flowchart TD
+visitor[NewVisitor] --> chooseRoute{ChooseRoute}
+chooseRoute --> beginner[BeginnerRoute]
+chooseRoute --> builder[BuilderRoute]
+chooseRoute --> researcher[ResearcherRoute]
+
+beginner --> surveys[Surveys]
+beginner --> systems[RepresentativeSystems]
+beginner --> actionBeginner[ActionWriteFieldMap]
+
+builder --> systems
+builder --> synthesis[LiteratureSynthesis]
+builder --> projects[FeaturedProjects]
+builder --> actionBuilder[ActionBuildMiniPipeline]
+
+researcher --> ideation[ResearchIdeation]
+researcher --> benchmark[BenchmarkEvaluation]
+researcher --> actionResearcher[ActionDefineHypothesisAndProtocol]
+```
 
 ## Recommended Reading Path
 
