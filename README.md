@@ -5,6 +5,18 @@
 [![GitHub issues](https://img.shields.io/github/issues/wang422003/vibe-research-starter-packet)](https://github.com/wang422003/vibe-research-starter-packet/issues)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
+## 🌐 Multilingual Version / 多语言版本
+
+**[View interactive multilingual README (13 languages) →](https://htmlpreview.github.io/?https://raw.githubusercontent.com/wang422003/vibe-research-starter-packet/main/index.html)**  
+**[查看交互式多语言 README（13 种语言）→](https://htmlpreview.github.io/?https://raw.githubusercontent.com/wang422003/vibe-research-starter-packet/main/index.html)**
+
+Languages: 中文 | English | 한국어 | 日本語 | Deutsch | Français | Español | Italiano | Português | العربية | ไทย | Tiếng Việt | Русский
+
+> *Or clone the repo and open `index.html` in your browser for the best experience.*  
+> *或克隆仓库后在浏览器中打开 `index.html` 以获得最佳体验。*
+
+---
+
 > A curated bilingual (CN/EN) starter packet for **Vibe Research**: LLM agents for scientific discovery, research ideation, literature synthesis, and scientific evaluation.
 >
 > 一个面向 **Vibe Research** 的中英双语入门资料包，聚焦 LLM Agent 在科学发现、研究构思、文献综合与科研评测中的代表性工作。
