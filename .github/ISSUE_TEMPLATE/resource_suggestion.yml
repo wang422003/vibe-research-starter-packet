@@ -1,0 +1,80 @@
+name: Resource Suggestion
+description: Suggest a new paper/resource for the Vibe Research Starter Packet
+title: "[Resource] "
+labels:
+  - resource-suggestion
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for contributing. Please provide complete metadata so maintainers can review quickly.
+
+  - type: input
+    id: title
+    attributes:
+      label: Resource title
+      placeholder: "Paper or resource title"
+    validations:
+      required: true
+
+  - type: input
+    id: url
+    attributes:
+      label: URL
+      placeholder: "https://arxiv.org/abs/xxxx.xxxxx"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type
+      options:
+        - Survey
+        - System
+        - Ideation
+        - Literature Synthesis
+        - Benchmark
+        - Evaluation
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: stage
+    attributes:
+      label: Suggested stage
+      options:
+        - Beginner
+        - Beginner-Intermediate
+        - Intermediate
+    validations:
+      required: true
+
+  - type: textarea
+    id: why_read
+    attributes:
+      label: Why should this be included?
+      description: 1-2 sentences describing uniqueness and learning value
+      placeholder: "What does this add that the list currently lacks?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: keywords
+    attributes:
+      label: Keywords
+      description: 2-5 tags, comma-separated
+      placeholder: "agentic tree search, autonomous science, benchmark"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Quick checks
+      options:
+        - label: I have searched the list and this is not a duplicate
+          required: true
+        - label: This resource is directly relevant to Vibe Research
+          required: true
