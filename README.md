@@ -64,6 +64,17 @@ This repo serves two audiences: **practitioners** (fastest way to get started) a
 
 More tools & comparisons: [→ Tools & Platforms](./topics/tools.md)
 
+### More Claw Ecosystem Projects
+
+| Project | Description | Link |
+|---|---|---|
+| **OpenClaw** | Personal AI assistant framework that powers a broader multi-skill ecosystem | [GitHub](https://github.com/openclaw/openclaw) · [Docs](https://docs.openclaw.ai/) |
+| **ScienceClaw** | Self-evolving AI research colleague for scientific workflows | [GitHub](https://github.com/beita6969/ScienceClaw) |
+| **ScienceClaw (alt repo)** | Another research-focused ScienceClaw implementation built on the Claw ecosystem | [GitHub](https://github.com/Zaoqu-Liu/ScienceClaw) |
+| **MetaClaw** | Self-evolving AI agent framework that learns from real-world conversations | [GitHub](https://github.com/aiming-lab/MetaClaw) · [Website](https://metaclaw.bot/) |
+| **AutoResearchClaw** | Fully autonomous research pipeline for generating conference-style papers from an idea | [GitHub](https://github.com/aiming-lab/AutoResearchClaw) |
+| **ResearchClaw Desktop App** | Desktop-first AI paper reading and note-taking workflow | [Website](https://noietch.github.io/ResearchClaw/) |
+
 ---
 
 ## Topics
@@ -129,6 +140,8 @@ Submit resources via [Resource Suggestion](https://github.com/SpectrAI-Initiativ
 <summary><b>Changelog</b></summary>
 
 - **2026-W13**: Added core tools & platforms (InnoClaw, ResearchClaw, FARS, Orchestra, OpenClaw, EvoScientist); added Deep Research tools, OpenAI Prism, MCP Servers; switched all content to English; expanded to 35+ papers across 9 topic files
+- **2026-W13**: Added more Claw ecosystem references, including OpenClaw GitHub, ScienceClaw repos, and the ResearchClaw desktop app
+- **2026-W13**: Added MetaClaw and AutoResearchClaw to the Claw ecosystem project references
 - **2026-W12**: Hub-and-spoke architecture reorganization
 - **2026-W12**: Initial public release
 

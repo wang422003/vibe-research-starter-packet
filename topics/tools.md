@@ -18,6 +18,17 @@ Agent systems and platforms purpose-built for automated scientific research:
 | **Orchestra** | AI-for-Science platform | [Website](https://www.orchestra-research.com/) | Cloud-based, no local deployment needed |
 | **Agent Laboratory** | Human-AI collaborative research | [GitHub](https://github.com/SamuelSchmidgall/AgentLaboratory) | Human-in-the-loop, researcher stays involved throughout |
 
+### Related Claw Ecosystem Projects
+
+| Project | Focus | Link | Highlights |
+|---|---|---|---|
+| **OpenClaw** | General-purpose personal AI assistant framework | [GitHub](https://github.com/openclaw/openclaw) · [Docs](https://docs.openclaw.ai/) | Cross-platform assistant with an extensible skill ecosystem |
+| **ScienceClaw** | Self-evolving scientific research agent | [GitHub](https://github.com/beita6969/ScienceClaw) | Research-oriented Claw variant with persistent memory and evolving skills |
+| **ScienceClaw (alt repo)** | Alternative research-lab implementation | [GitHub](https://github.com/Zaoqu-Liu/ScienceClaw) | Research workflow automation with broad database/tool coverage |
+| **MetaClaw** | Self-evolving agent framework | [GitHub](https://github.com/aiming-lab/MetaClaw) · [Website](https://metaclaw.bot/) | Online learning framework for continuously improving Claw-style agents |
+| **AutoResearchClaw** | Autonomous research pipeline | [GitHub](https://github.com/aiming-lab/AutoResearchClaw) | End-to-end academic pipeline from topic to paper with code, review, and reports |
+| **ResearchClaw Desktop App** | Desktop paper reading and note-taking workflow | [Website](https://noietch.github.io/ResearchClaw/) | PDF chat, note-taking, agentic search, local-first workflow |
+
 ### Platform Comparison
 
 | Dimension | InnoClaw | ResearchClaw | FARS | AI-Scientist | Orchestra |
