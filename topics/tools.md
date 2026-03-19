@@ -1,98 +1,98 @@
-<h1 align="center">Vibe Research Guide<br>工具与平台 Tools & Platforms</h1>
+<h1 align="center">Vibe Research Guide<br>Tools & Platforms</h1>
 
-> 从 Vibe Research 核心平台到辅助工具，帮你快速找到适合自己的工具组合。
+> From core Vibe Research platforms to supporting tools — find the right combination for your workflow.
 
 ---
 
-## Vibe Research 核心平台
+## Core Vibe Research Platforms
 
-这些是专门为自动化科研设计的 Agent 系统和平台：
+Agent systems and platforms purpose-built for automated scientific research:
 
-| 项目 | 功能定位 | 链接 | 特点 |
+| Project | Focus | Link | Highlights |
 |---|---|---|---|
-| **InnoClaw** | AI 科研创新 Agent | [GitHub](https://github.com/SpectrAI-Initiative/InnoClaw) | 开源，专注科学创新，支持文献分析到 idea 生成 |
-| **ResearchClaw** | 个人科研助手 | [GitHub](https://github.com/ymx10086/ResearchClaw) | 开源，CLI/Web/Slack 多端，集成文献/数据/通用工具 |
-| **FARS（日行迹）** | 全自动科研系统 | [GitHub](https://github.com/fars-analemma) · [官网](https://analemma.ai/) | 复旦 MOSS 团队，四模块端到端（Ideation→Planning→Experiment→Writing） |
-| **AI-Scientist** | 端到端科研自动化 | [GitHub](https://github.com/SakanaAI/AI-Scientist) | Sakana AI，idea→实验→论文→审稿全流程 |
-| **Orchestra** | AI-for-Science 平台 | [官网](https://www.orchestra-research.com/) | 云端 Vibe Research 平台，无需本地部署 |
-| **Agent Laboratory** | 人机协作研究助手 | [GitHub](https://github.com/SamuelSchmidgall/AgentLaboratory) | Human-in-the-loop，支持研究者全程参与 |
+| **InnoClaw** | AI research innovation agent | [GitHub](https://github.com/SpectrAI-Initiative/InnoClaw) | Open-source, literature analysis to idea generation |
+| **ResearchClaw** | Personal research assistant | [GitHub](https://github.com/ymx10086/ResearchClaw) | Open-source, CLI/Web/Slack, integrated research/data/general tools |
+| **FARS (Analemma)** | Fully automated research system | [GitHub](https://github.com/fars-analemma) · [Website](https://analemma.ai/) | Fudan MOSS team, 4 modules end-to-end (Ideation→Planning→Experiment→Writing) |
+| **AI-Scientist** | End-to-end research automation | [GitHub](https://github.com/SakanaAI/AI-Scientist) | Sakana AI, idea→experiment→paper→review pipeline |
+| **Orchestra** | AI-for-Science platform | [Website](https://www.orchestra-research.com/) | Cloud-based, no local deployment needed |
+| **Agent Laboratory** | Human-AI collaborative research | [GitHub](https://github.com/SamuelSchmidgall/AgentLaboratory) | Human-in-the-loop, researcher stays involved throughout |
 
-### 核心平台对比
+### Platform Comparison
 
-| 维度 | InnoClaw | ResearchClaw | FARS | AI-Scientist | Orchestra |
+| Dimension | InnoClaw | ResearchClaw | FARS | AI-Scientist | Orchestra |
 |---|---|---|---|---|---|
-| 开源 | ✅ | ✅ | ✅ | ✅ | ❌（云服务） |
-| 覆盖环节 | 文献→Idea | 文献→数据→实验 | Idea→论文（全流程） | Idea→论文（全流程） | 全流程 |
-| 交互方式 | CLI | CLI/Web/Slack | Web | CLI | Web |
-| 上手难度 | ⭐⭐ | ⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ | ⭐ |
-| 适合谁 | 入门者/研究者 | 个人研究者 | 全自动化需求 | 全自动化需求 | 零代码用户 |
+| Open-source | ✅ | ✅ | ✅ | ✅ | ❌ (cloud) |
+| Coverage | Literature→Idea | Literature→Data→Experiment | Idea→Paper (full) | Idea→Paper (full) | Full pipeline |
+| Interface | CLI | CLI/Web/Slack | Web | CLI | Web |
+| Difficulty | ⭐⭐ | ⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ | ⭐ |
+| Best for | Beginners / Researchers | Individual researchers | Full automation | Full automation | Zero-code users |
 
-### OpenClaw 生态
+### OpenClaw Ecosystem
 
-[OpenClaw](https://docs.openclaw.ai/) 是一个开放的 AI Agent 技能生态系统，涵盖 28 个类别的技能（包括 AI & LLMs、搜索与研究、Agent 社交等），为上述核心平台提供可扩展的技能支持。
-
----
-
-## 文献发现与检索
-
-| 工具 | 链接 | 特点 | 费用 |
-|---|---|---|---|
-| Semantic Scholar | [website](https://www.semanticscholar.org/) | Allen AI，AI 驱动搜索，开放 API | 免费 |
-| Connected Papers | [website](https://www.connectedpapers.com/) | 论文引用关系图谱可视化 | 免费 |
-| Research Rabbit | [website](https://www.researchrabbit.ai/) | 基于收藏的持续论文推荐 | 免费 |
-| Litmaps | [website](https://www.litmaps.com/) | 交互式文献图谱 | 免费/Pro |
-| Google Scholar | [website](https://scholar.google.com/) | 覆盖面最广，支持 Alerts | 免费 |
-
-## 文献阅读与综合
-
-| 工具 | 链接 | 特点 | 费用 |
-|---|---|---|---|
-| Elicit | [website](https://elicit.com/) | 输入研究问题，自动检索并提取数据 | 免费 |
-| Consensus | [website](https://consensus.app/) | 基于论文证据直接回答问题 | 免费 |
-| NotebookLM | [website](https://notebooklm.google.com/) | Google 出品，上传论文对话式阅读 | 免费 |
-| PaperQA2 | [GitHub](https://github.com/Future-House/paper-qa) | 开源 RAG 文献问答，精确引用 | 免费 |
-| OpenScholar | [GitHub](https://github.com/allenai/OpenScholar) | Allen AI，大规模文献综合 | 免费 |
-| Perplexity | [website](https://www.perplexity.ai/) | 带引用的 AI 搜索引擎 | 免费 |
-
-## 写作与审稿辅助
-
-| 工具 | 链接 | 特点 | 费用 |
-|---|---|---|---|
-| Writefull | [website](https://www.writefull.com/) | 专为学术写作设计的 AI 润色 | 免费/Pro |
-| Paperpal | [website](https://paperpal.com/) | Springer Nature 支持 | 免费/Pro |
-| Grammarly | [website](https://www.grammarly.com/) | 通用写作助手，支持学术模式 | 免费 |
-
-## 实验与代码辅助
-
-| 工具 | 链接 | 特点 | 费用 |
-|---|---|---|---|
-| Cursor | [website](https://cursor.sh/) | AI-native 代码编辑器 | 免费/Pro |
-| GitHub Copilot | [website](https://github.com/features/copilot) | AI 编码助手 | $10/月 |
-| OpenHands | [GitHub](https://github.com/All-Hands-AI/OpenHands) | 开源全栈 Agent | 免费 |
-| SWE-agent | [GitHub](https://github.com/princeton-nlp/SWE-agent) | 代码修复 Agent | 免费 |
-| Weights & Biases | [website](https://wandb.ai/) | ML 实验跟踪 | 免费（个人） |
-
-## 文献管理
-
-| 工具 | 链接 | 特点 | 费用 |
-|---|---|---|---|
-| Zotero | [website](https://www.zotero.org/) | 开源，生态丰富（支持 AI 插件） | 免费 |
-| Zotero + ZoteroGPT | [GitHub](https://github.com/MuiseDestiny/zotero-gpt) | Zotero 的 GPT 插件 | 免费 |
-| Paperpile | [website](https://paperpile.com/) | 与 Google Docs 深度集成 | $3/月 |
+[OpenClaw](https://docs.openclaw.ai/) is an open AI agent skill ecosystem with 28 skill categories (including AI & LLMs, search & research, agent social ecosystem), providing extensible skill support for the platforms above.
 
 ---
 
-## 工具选型指南
+## Literature Discovery & Search
 
-| 你想做什么 | 推荐方案 |
+| Tool | Link | Highlights | Cost |
+|---|---|---|---|
+| Semantic Scholar | [website](https://www.semanticscholar.org/) | Allen AI, AI-powered search, open API | Free |
+| Connected Papers | [website](https://www.connectedpapers.com/) | Citation graph visualization | Free |
+| Research Rabbit | [website](https://www.researchrabbit.ai/) | Continuous paper recommendations based on your collection | Free |
+| Litmaps | [website](https://www.litmaps.com/) | Interactive literature maps | Free / Pro |
+| Google Scholar | [website](https://scholar.google.com/) | Broadest coverage, supports Alerts | Free |
+
+## Literature Reading & Synthesis
+
+| Tool | Link | Highlights | Cost |
+|---|---|---|---|
+| Elicit | [website](https://elicit.com/) | Enter a research question, auto-retrieve and extract data | Free |
+| Consensus | [website](https://consensus.app/) | Evidence-based answers from papers | Free |
+| NotebookLM | [website](https://notebooklm.google.com/) | Google, upload papers for conversational reading | Free |
+| PaperQA2 | [GitHub](https://github.com/Future-House/paper-qa) | Open-source RAG literature Q&A with precise citations | Free |
+| OpenScholar | [GitHub](https://github.com/allenai/OpenScholar) | Allen AI, large-scale literature synthesis | Free |
+| Perplexity | [website](https://www.perplexity.ai/) | AI search engine with citations | Free |
+
+## Writing & Review Aids
+
+| Tool | Link | Highlights | Cost |
+|---|---|---|---|
+| Writefull | [website](https://www.writefull.com/) | AI proofreading designed for academic writing | Free / Pro |
+| Paperpal | [website](https://paperpal.com/) | Backed by Springer Nature | Free / Pro |
+| Grammarly | [website](https://www.grammarly.com/) | General writing assistant with academic mode | Free |
+
+## Experiment & Code Aids
+
+| Tool | Link | Highlights | Cost |
+|---|---|---|---|
+| Cursor | [website](https://cursor.sh/) | AI-native code editor | Free / Pro |
+| GitHub Copilot | [website](https://github.com/features/copilot) | AI coding assistant | $10/mo |
+| OpenHands | [GitHub](https://github.com/All-Hands-AI/OpenHands) | Open-source full-stack agent | Free |
+| SWE-agent | [GitHub](https://github.com/princeton-nlp/SWE-agent) | Code repair agent | Free |
+| Weights & Biases | [website](https://wandb.ai/) | ML experiment tracking | Free (personal) |
+
+## Reference Management
+
+| Tool | Link | Highlights | Cost |
+|---|---|---|---|
+| Zotero | [website](https://www.zotero.org/) | Open-source, rich ecosystem (AI plugins available) | Free |
+| Zotero + ZoteroGPT | [GitHub](https://github.com/MuiseDestiny/zotero-gpt) | GPT plugin for Zotero | Free |
+| Paperpile | [website](https://paperpile.com/) | Deep Google Docs integration | $3/mo |
+
+---
+
+## Tool Selection Guide
+
+| What you want to do | Recommended |
 |---|---|
-| **快速体验 Vibe Research** | Elicit + NotebookLM（零代码） |
-| **部署个人 Research Agent** | InnoClaw 或 ResearchClaw |
-| **文献 RAG 问答** | PaperQA2 |
-| **全流程自动化科研** | FARS 或 AI-Scientist |
-| **云端无部署** | Orchestra |
-| **完整研究工作流** | ResearchClaw + Zotero + Cursor + W&B |
+| **Quick Vibe Research demo** | Elicit + NotebookLM (zero-code) |
+| **Deploy a personal Research Agent** | InnoClaw or ResearchClaw |
+| **Literature RAG Q&A** | PaperQA2 |
+| **Full automated research** | FARS or AI-Scientist |
+| **Cloud, no deployment** | Orchestra |
+| **Complete research workflow** | ResearchClaw + Zotero + Cursor + W&B |
 
 ---
 
-> **返回主页**：[README](../README.md) · **上一篇**：[上手指南](./getting-started.md) · **下一篇**：[综述篇](./surveys.md)
+> **Home**: [README](../README.md) · **Prev**: [Getting Started](./getting-started.md) · **Next**: [Surveys](./surveys.md)

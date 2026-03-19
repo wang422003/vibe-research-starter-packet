@@ -4,7 +4,7 @@ All notable updates to this guide are documented in this file.
 
 ## 2026-W13
 
-- 新增核心工具与平台（InnoClaw、ResearchClaw、FARS、Orchestra、OpenClaw）；内容扩充至 30+ 篇论文，9 个 topic 文件。
+- Added core tools & platforms (InnoClaw, ResearchClaw, FARS, Orchestra, OpenClaw); expanded to 30+ papers across 9 topic files.
 
 ## 2026-W12 (Reorganization)
 

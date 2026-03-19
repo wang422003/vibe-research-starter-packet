@@ -1,67 +1,67 @@
-<h1 align="center">Vibe Research Guide<br>快速上手 Getting Started</h1>
+<h1 align="center">Vibe Research Guide<br>Getting Started</h1>
 
-> 本篇帮你用最短时间**上手 Vibe Research**——不是读论文，而是直接用工具做研究。
+> Get hands-on with Vibe Research in the shortest time — not by reading papers, but by using tools to do research.
 
-## 什么是 Vibe Research
+## What is Vibe Research
 
-用 LLM Agent 自动化科研流程：文献调研 → 提出 idea → 设计实验 → 写代码跑实验 → 撰写论文。
+Automate the research workflow with LLM Agents: literature review → idea generation → experiment design → code & run → paper writing.
 
-你不需要是 AI 专家，只需要会用工具。
+You don't need to be an AI expert — you just need to use the right tools.
 
 ---
 
-## 快速上手路线
+## Quick Start Routes
 
-| 路线 | 时间 | 工具 | 你能做到 |
+| Route | Time | Tools | What you can do |
 |---|---|---|---|
-| **零代码体验** | 5 分钟 | Elicit / Consensus / NotebookLM | 用 AI 搜论文、读论文、提问 |
-| **一键部署** | 30 分钟 | InnoClaw / ResearchClaw | 运行完整的 Research Agent |
-| **全流程自动化** | 1-2 小时 | FARS（日行迹） | 从 idea 到论文的端到端自动化 |
+| **Zero-code demo** | 5 min | Elicit / Consensus / NotebookLM | Search papers, read papers, ask questions with AI |
+| **Deploy an agent** | 30 min | InnoClaw / ResearchClaw | Run a complete Research Agent |
+| **Full automation** | 1–2 hrs | FARS (Analemma) | End-to-end: from idea to paper |
 
 ---
 
-## 路线一：5 分钟零代码体验
+## Route 1: 5-Minute Zero-Code Demo
 
-不写代码，用现成 AI 工具体验 Vibe Research：
+No coding required — experience Vibe Research with existing AI tools:
 
-1. **文献搜索**：打开 [Elicit](https://elicit.com/)，输入研究问题（如 *"What are the main approaches for using LLMs in scientific discovery?"*），看 AI 如何自动检索论文并提取关键信息
-2. **论文阅读**：上传一篇 PDF 到 [NotebookLM](https://notebooklm.google.com/)，提问 *"Summarize the key contributions and limitations"*
-3. **Idea 头脑风暴**：在 ChatGPT / Claude 中输入你的研究方向，让 AI 帮你梳理挑战和 idea
+1. **Literature search**: Open [Elicit](https://elicit.com/), enter a research question (e.g., *"What are the main approaches for using LLMs in scientific discovery?"*), and see how AI retrieves papers and extracts key information
+2. **Paper reading**: Upload a PDF to [NotebookLM](https://notebooklm.google.com/), ask *"Summarize the key contributions and limitations"*
+3. **Idea brainstorm**: Enter your research direction in ChatGPT / Claude and let AI help you identify challenges and ideas
 
-这就是 Vibe Research 的基本形态——AI 辅助每个研究环节。
+This is the basic form of Vibe Research — AI assisting every step of the research process.
 
 ---
 
-## 路线二：30 分钟部署 Research Agent
+## Route 2: Deploy a Research Agent in 30 Minutes
 
-### 选项 A：InnoClaw（推荐）
+### Option A: InnoClaw (Recommended)
 
-[InnoClaw](https://github.com/SpectrAI-Initiative/InnoClaw) 是开源 AI 科研 Agent，专注科学创新，支持从文献调研到 idea 生成的完整流程。
+[InnoClaw](https://github.com/SpectrAI-Initiative/InnoClaw) is an open-source AI research agent focused on scientific innovation, supporting the full pipeline from literature analysis to idea generation.
 
 ```bash
-# 克隆仓库
+# Clone the repo
 git clone https://github.com/SpectrAI-Initiative/InnoClaw.git
 cd InnoClaw
 
-# 安装依赖
+# Install dependencies
 pip install -r requirements.txt
 
-# 配置 API Key
+# Configure API Key
 cp .env.example .env
-# 编辑 .env，填入你的 API Key
+# Edit .env and fill in your API Key
 
-# 运行
+# Run
 python main.py
 ```
 
-InnoClaw 能做什么：
-- 自动文献检索与分析
-- 基于文献的 idea 生成
-- 研究方案设计辅助
+What InnoClaw can do:
+- Automated literature retrieval & analysis
+- Literature-based idea generation
+- Research plan design assistance
 
-### 选项 B：ResearchClaw
+### Option B: ResearchClaw
 
-[ResearchClaw](https://github.com/ymx10086/ResearchClaw) 是个人 AI 科研助手，提供 CLI / Web / Slack 多种交互方式。
+[ResearchClaw](https://github.com/ymx10086/ResearchClaw) is a personal AI research assistant with CLI / Web / Slack interfaces.
 
 ```bash
 git clone https://github.com/ymx10086/ResearchClaw.git
@@ -69,20 +69,20 @@ cd ResearchClaw
 
 pip install -r requirements.txt
 
-# 配置后运行
+# Configure and run
 python app.py
 ```
 
-ResearchClaw 的核心能力：
-- **文献工具**：ArXiv 搜索、Semantic Scholar 检索、PDF 解析、BibTeX 生成
-- **数据工具**：数据分析（pandas）、可视化（matplotlib）、统计分析
-- **通用工具**：Shell 执行、文件 I/O、浏览器、记忆管理
+Core capabilities:
+- **Research tools**: ArXiv search, Semantic Scholar retrieval, PDF parsing, BibTeX generation
+- **Data tools**: Data analysis (pandas), visualization (matplotlib), statistical analysis
+- **General tools**: Shell execution, file I/O, browser, memory management
 
-架构：`用户 → Console/CLI/Slack → FastAPI → ScholarAgent（ReAct） → 工具集`
+Architecture: `User → Console/CLI/Slack → FastAPI → ScholarAgent (ReAct) → Tool suite`
 
-### 选项 C：PaperQA2（文献问答）
+### Option C: PaperQA2 (Literature Q&A)
 
-[PaperQA2](https://github.com/Future-House/paper-qa) 适合只需要文献问答 RAG 能力的场景：
+[PaperQA2](https://github.com/Future-House/paper-qa) is ideal if you only need literature Q&A with RAG:
 
 ```bash
 pip install paper-qa
@@ -99,28 +99,28 @@ print(answer.formatted_answer)
 
 ---
 
-## 路线三：全流程自动化
+## Route 3: Full Automation
 
-### FARS（日行迹）— 全自动科研系统
+### FARS (Analemma) — Fully Automated Research System
 
-[FARS](https://github.com/fars-analemma)（Fully Automated Research System）由复旦 MOSS 团队打造的日行迹（Analemma）公司开发，是目前最完整的端到端自动科研系统。
+[FARS](https://github.com/fars-analemma) (Fully Automated Research System) is developed by Analemma, a company founded by the Fudan MOSS team. It is currently the most complete end-to-end automated research system.
 
-**四大模块**：
+**Four modules**:
 
-| 模块 | 功能 | 说明 |
+| Module | Function | Description |
 |---|---|---|
-| Ideation | 研究构思 | 自动发现研究问题和创新点 |
-| Planning | 实验规划 | 设计实验方案和技术路线 |
-| Experiment | 实验执行 | 自动编写代码、运行实验、分析结果 |
-| Writing | 论文撰写 | 生成完整的学术论文 |
+| Ideation | Research ideation | Automatically discover research questions and novel ideas |
+| Planning | Experiment planning | Design experiment plans and technical approaches |
+| Experiment | Experiment execution | Automatically write code, run experiments, analyze results |
+| Writing | Paper writing | Generate complete academic papers |
 
-FARS 曾进行 228 小时直播，自动产出 100 篇论文，展示了全流程自动化的可行性。
+FARS conducted a 228-hour live demo, automatically producing 100 papers, demonstrating the feasibility of full-pipeline automation.
 
-官网：[analemma.ai](https://analemma.ai/) · GitHub：[fars-analemma](https://github.com/fars-analemma)
+Website: [analemma.ai](https://analemma.ai/) · GitHub: [fars-analemma](https://github.com/fars-analemma)
 
-### AI-Scientist — 端到端科研
+### AI-Scientist — End-to-End Research
 
-[AI-Scientist](https://github.com/SakanaAI/AI-Scientist) 是 Sakana AI 的端到端系统，覆盖 idea 生成 → 实验 → 论文撰写 → 自动审稿。
+[AI-Scientist](https://github.com/SakanaAI/AI-Scientist) by Sakana AI covers idea generation → experiment → paper writing → automated review.
 
 ```bash
 git clone https://github.com/SakanaAI/AI-Scientist.git
@@ -129,38 +129,38 @@ pip install -r requirements.txt
 export OPENAI_API_KEY="your-key"
 ```
 
-### Orchestra — AI-for-Science 平台
+### Orchestra — AI-for-Science Platform
 
-[Orchestra](https://www.orchestra-research.com/) 是专为 Vibe Research 设计的 AI-for-Science 平台，提供云端科研自动化服务，无需本地部署。
+[Orchestra](https://www.orchestra-research.com/) is an AI-for-Science platform designed for Vibe Research, offering cloud-based research automation with no local deployment required.
 
 ---
 
-## 工具选择指南
+## Tool Selection Guide
 
-| 你想做什么 | 推荐工具 | 难度 |
+| What you want to do | Recommended tool | Difficulty |
 |---|---|---|
-| 快速搜论文、读论文 | Elicit / Consensus / NotebookLM | ⭐ |
-| 跑一个 Research Agent | InnoClaw / ResearchClaw | ⭐⭐ |
-| 文献问答 RAG | PaperQA2 | ⭐⭐ |
-| 全流程自动化（idea→论文） | FARS / AI-Scientist | ⭐⭐⭐ |
-| 云端科研平台 | Orchestra | ⭐ |
+| Quickly search & read papers | Elicit / Consensus / NotebookLM | ⭐ |
+| Run a Research Agent | InnoClaw / ResearchClaw | ⭐⭐ |
+| Literature Q&A with RAG | PaperQA2 | ⭐⭐ |
+| Full automation (idea → paper) | FARS / AI-Scientist | ⭐⭐⭐ |
+| Cloud research platform | Orchestra | ⭐ |
 
 ---
 
-## 常见问题
+## FAQ
 
-**Q: 需要会编程吗？**
-A: 不一定。零代码工具（Elicit、NotebookLM、Orchestra）已覆盖基本场景。部署 Agent 需要基础的 Python 和命令行。
+**Q: Do I need to know programming?**
+A: Not necessarily. Zero-code tools (Elicit, NotebookLM, Orchestra) cover basic scenarios. Deploying an agent requires basic Python and command line skills.
 
-**Q: 需要 GPU 吗？**
-A: 大多数工具使用 API 调用，普通笔记本即可。本地部署大模型才需要 GPU。
+**Q: Do I need a GPU?**
+A: Most tools use API calls — a regular laptop is fine. A GPU is only needed for local model deployment.
 
-**Q: API 费用大概多少？**
-A: 小规模实验约 $1-5。建议先设置 token 上限，用小数据测试。
+**Q: How much do API calls cost?**
+A: Small-scale experiments cost about $1–5. Set token limits and test with small data first.
 
-**Q: 用 AI 做的研究能发论文吗？**
-A: 可以，但需注意各会议/期刊对 AI 辅助的政策。核心原则：研究者对内容负责。
+**Q: Can AI-assisted research be published?**
+A: Yes, but check each venue's policy on AI-assisted writing. Core principle: the researcher is responsible for the content.
 
 ---
 
-> **返回主页**：[README](../README.md) · **下一步**：[工具与平台](./tools.md)
+> **Home**: [README](../README.md) · **Next**: [Tools & Platforms](./tools.md)
