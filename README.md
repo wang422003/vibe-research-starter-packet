@@ -12,7 +12,8 @@
 </p>
 
 <p align="center">
-  <strong><a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/SpectrAI-Initiative/Vibe-Research-Guide/main/index.html">查看交互式多语言版本（13 种语言）→</a></strong>
+  <strong><a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/SpectrAI-Initiative/Vibe-Research-Guide/main/index.html">🌐 View Interactive Multilingual README →</a></strong><br>
+  <small>🇨🇳 中文 · 🇺🇸 English · 🇰🇷 한국어 · 🇯🇵 日本語 · 🇩🇪 Deutsch · 🇫🇷 Français · 🇪🇸 Español · 🇮🇹 Italiano · 🇵🇹 Português · 🇸🇦 العربية · 🇹🇭 ไทย · 🇻🇳 Tiếng Việt · 🇷🇺 Русский</small>
 </p>
 
 ---
