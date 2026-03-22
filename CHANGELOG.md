@@ -11,10 +11,11 @@ All notable updates to this guide are documented in this file.
 
 ## 2026-W12
 
+- Added a new `topics/claw-park.md` guide to explain what each Claw project is building and how the ecosystem layers fit together.
 - Added a 2026 landscape snapshot to `README.md` to clarify the current split between research copilots, autonomous AI scientists, and vibe coding execution layers.
 - Added a new `topics/vibe-coding.md` guide covering terminal agents, coding agents, background agents, and repo safety patterns.
 - Added a new `topics/vibe-anything.md` guide for adjacent prompt-native workflows (apps, design, writing, slides, and ops), explicitly separated from core Vibe Research.
-- Expanded `topics/tools.md` with Prism, Vibe Coding tools, and adjacent agentic workflow references.
+- Expanded `topics/tools.md` with Prism, Claw Park, Vibe Coding tools, and adjacent agentic workflow references.
 
 ## 2026-W12 (Reorganization)
 

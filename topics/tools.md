@@ -29,6 +29,8 @@ Agent systems and platforms purpose-built for automated scientific research:
 | **AutoResearchClaw** | Autonomous research pipeline | [GitHub](https://github.com/aiming-lab/AutoResearchClaw) | End-to-end academic pipeline from topic to paper with code, review, and reports |
 | **ResearchClaw Desktop App** | Desktop paper reading and note-taking workflow | [Website](https://noietch.github.io/ResearchClaw/) | PDF chat, note-taking, agentic search, local-first workflow |
 
+More ecosystem positioning: [→ Claw Park](./claw-park.md)
+
 ### Platform Comparison
 
 | Dimension | InnoClaw | ResearchClaw | FARS | AI-Scientist | Orchestra |
@@ -42,6 +44,21 @@ Agent systems and platforms purpose-built for automated scientific research:
 ### OpenClaw Ecosystem
 
 [OpenClaw](https://docs.openclaw.ai/) is an open AI agent skill ecosystem with 28 skill categories (including AI & LLMs, search & research, agent social ecosystem), providing extensible skill support for the platforms above.
+
+## Claw Park at a Glance
+
+If you are confused by the growing number of Claw-branded projects, the cleanest mental model is:
+
+| Layer | Representative project | Role |
+|---|---|---|
+| Foundation | OpenClaw | Base assistant framework and skill ecosystem |
+| Research workspace | InnoClaw | Grounded workspace for files, papers, and execution |
+| Personal research copilot | ResearchClaw | Day-to-day research assistance across search, notes, and writing |
+| Scientific specialist | ScienceClaw | Research-oriented, self-evolving scientific collaborator |
+| Evolution engine | MetaClaw | Learns skills from real conversations and improves over time |
+| Autonomous pipeline | AutoResearchClaw | Turns an idea into a full paper pipeline with minimal human intervention |
+
+Full guide: [→ Claw Park](./claw-park.md)
 
 ---
 

@@ -97,6 +97,19 @@ More tools & comparisons: [→ Tools & Platforms](./topics/tools.md)
 | **AutoResearchClaw** | Fully autonomous research pipeline for generating conference-style papers from an idea | [GitHub](https://github.com/aiming-lab/AutoResearchClaw) |
 | **ResearchClaw Desktop App** | Desktop-first AI paper reading and note-taking workflow | [Website](https://noietch.github.io/ResearchClaw/) |
 
+### Claw Park
+
+Want the ecosystem map instead of just a project list? Read [→ Claw Park](./topics/claw-park.md).
+
+| Project | What it is doing | Best for |
+|---|---|---|
+| **OpenClaw** | The base assistant platform and skill ecosystem that other Claw variants can build on | Teams that want a general agent foundation |
+| **InnoClaw** | A self-hostable research workspace for grounded chat, paper study, and research execution | Labs that want a practical research cockpit |
+| **ResearchClaw** | A personal research assistant that connects literature, notes, experiment tracking, and paper writing | Individual researchers and small teams |
+| **ScienceClaw** | A self-evolving scientific colleague focused on persistent skills and memory for research workflows | Research-heavy users who want stronger long-horizon assistance |
+| **MetaClaw** | The learning layer that turns real conversations into evolving reusable skills | Builders interested in online evolution, skill learning, and RL-style adaptation |
+| **AutoResearchClaw** | The full autonomous pipeline from idea to paper with experiments, review, and deliverables | Users testing end-to-end autonomous paper generation |
+
 ---
 
 ## Topics
@@ -107,6 +120,7 @@ More tools & comparisons: [→ Tools & Platforms](./topics/tools.md)
 |---|---|---|
 | 🚀 **Getting Started** | 5-min demo → 30-min agent deployment → full automation | [→ Getting Started](./topics/getting-started.md) |
 | 🧰 **Tools & Platforms** | Core platforms, literature tools, writing aids, experiment tools | [→ Tools & Platforms](./topics/tools.md) |
+| 🦞 **Claw Park** | Ecosystem map for what each Claw project is building and where it fits | [→ Claw Park](./topics/claw-park.md) |
 | 💻 **Vibe Coding** | Terminal agents, coding agents, background agents, and repo guardrails | [→ Vibe Coding](./topics/vibe-coding.md) |
 
 ### Paper Index (35+ papers)
@@ -177,6 +191,7 @@ Submit resources via [Resource Suggestion](https://github.com/SpectrAI-Initiativ
 - **2026-W13**: Added core tools & platforms (InnoClaw, ResearchClaw, FARS, Orchestra, OpenClaw, EvoScientist); added Deep Research tools, OpenAI Prism, MCP Servers; switched all content to English; expanded to 35+ papers across 9 topic files
 - **2026-W13**: Added more Claw ecosystem references, including OpenClaw GitHub, ScienceClaw repos, and the ResearchClaw desktop app
 - **2026-W13**: Added MetaClaw and AutoResearchClaw to the Claw ecosystem project references
+- **2026-W12**: Added Claw Park to explain what each Claw project is building and how the ecosystem layers fit together
 - **2026-W12**: Added 2026 landscape snapshot, research copilots/workspaces, and two new guide tracks: Vibe Coding and Vibe Anything
 - **2026-W12**: Hub-and-spoke architecture reorganization
 - **2026-W12**: Initial public release

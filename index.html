@@ -10,16 +10,17 @@
       --card: #f6f8fa;
       --border: #d0d7de;
       --text: #24292f;
+      --muted: #57606a;
       --accent: #0969da;
-      --accent-hover: #0550ae;
+      --accent-soft: #dbeafe;
     }
     * { box-sizing: border-box; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.6;
-      max-width: 900px;
+      line-height: 1.65;
+      max-width: 980px;
       margin: 0 auto;
       padding: 2rem;
     }
@@ -30,56 +31,82 @@
       margin-bottom: 2rem;
       padding: 1rem;
       background: var(--card);
-      border-radius: 8px;
+      border-radius: 10px;
       border: 1px solid var(--border);
     }
     .lang-bar span {
-      font-size: 0.85rem;
-      color: #57606a;
+      font-size: 0.9rem;
+      color: var(--muted);
       margin-right: 0.5rem;
       align-self: center;
     }
     .lang-btn {
-      padding: 0.4rem 0.8rem;
+      padding: 0.45rem 0.85rem;
       border: 1px solid var(--border);
-      background: var(--card);
+      background: #fff;
       color: var(--text);
-      border-radius: 6px;
+      border-radius: 999px;
       cursor: pointer;
       font-size: 0.9rem;
-      transition: all 0.2s;
-    }
-    .lang-btn:hover {
-      background: var(--border);
-      border-color: var(--accent);
     }
     .lang-btn.active {
       background: var(--accent);
       border-color: var(--accent);
-      color: #ffffff;
+      color: #fff;
     }
     .content { display: none; }
     .content.active { display: block; }
-    h1 { font-size: 2rem; margin-top: 0; }
-    h2 { font-size: 1.5rem; margin-top: 2rem; border-bottom: 1px solid var(--border); padding-bottom: 0.3rem; }
-    h3 { font-size: 1.2rem; margin-top: 1.5rem; }
+    h1 { font-size: 2.2rem; margin: 0 0 0.5rem; }
+    h2 {
+      font-size: 1.45rem;
+      margin-top: 2rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.35rem;
+    }
+    h3 { font-size: 1.1rem; margin-top: 1.4rem; }
+    p { margin: 0.75rem 0; }
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
-    blockquote { border-left: 4px solid var(--accent); margin: 1rem 0; padding-left: 1rem; color: #57606a; }
-    ul, ol { padding-left: 1.5rem; }
-    table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
-    th, td { border: 1px solid var(--border); padding: 0.6rem; text-align: left; }
+    blockquote {
+      margin: 1rem 0;
+      padding: 0.8rem 1rem;
+      border-left: 4px solid var(--accent);
+      background: #fafcff;
+      color: var(--muted);
+    }
+    ul, ol { padding-left: 1.4rem; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 0.7rem;
+      text-align: left;
+      vertical-align: top;
+    }
     th { background: var(--card); }
-    pre { background: var(--card); padding: 1rem; border-radius: 6px; overflow-x: auto; }
     .badges { margin: 1rem 0; }
+    .callout {
+      background: var(--accent-soft);
+      border: 1px solid #bfdbfe;
+      border-radius: 10px;
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+    .section-note { color: var(--muted); }
     [dir="rtl"] { text-align: right; }
-    [dir="rtl"] ul, [dir="rtl"] ol { padding-left: 0; padding-right: 1.5rem; }
-    [dir="rtl"] blockquote { border-left: none; border-right: 4px solid var(--accent); padding-left: 0; padding-right: 1rem; }
+    [dir="rtl"] ul, [dir="rtl"] ol { padding-left: 0; padding-right: 1.4rem; }
+    [dir="rtl"] blockquote {
+      border-left: none;
+      border-right: 4px solid var(--accent);
+    }
   </style>
 </head>
 <body>
   <div class="lang-bar">
-    <span id="lang-label">Language / 语言:</span>
+    <span>Language / 语言:</span>
     <button class="lang-btn active" data-lang="en">English</button>
     <button class="lang-btn" data-lang="zh">中文</button>
     <button class="lang-btn" data-lang="ko">한국어</button>
@@ -113,359 +140,225 @@
     const translations = {
       en: {
         title: "Vibe Research Guide",
-        subtitle: "A curated multilingual guide for <strong>Vibe Research</strong>: LLM agents for scientific discovery, research ideation, literature synthesis, and scientific evaluation.",
-        quickstart: "30-Second Quickstart",
+        subtitle: "A curated multilingual guide for Vibe Research, Claw ecosystem navigation, Vibe Coding, and adjacent prompt-native workflows.",
+        quickstart: "Quick Start",
         quickstartSteps: [
-          "Start with the <strong>Recommended Reading Path</strong> and finish the first 3 surveys.",
-          "Pick one direction from <strong>Systems / Ideation / Benchmark</strong> and deep-dive 2 papers.",
-          "Open one issue using <code>Resource Suggestion</code> to share a missing paper or toolkit."
+          "If you are new to the field, start from Getting Started and Tools & Platforms.",
+          "If you are comparing Claw projects, go straight to Claw Park.",
+          "If you care about execution, read Vibe Coding after the main research pages."
         ],
-        quickstartNote: "If you only have 30 minutes today: read Paper #1 + #4 + #12.",
         toc: "Table of Contents",
         whatIs: "What is Vibe Research?",
-        whatIsDesc: "Vibe Research studies how LLM-based agents can support or automate the full research loop: finding ideas, planning experiments, writing code, synthesizing literature, and validating scientific insights.",
-        whoFor: "Who is this for?",
-        whoForItems: [
-          "Newcomers who want a structured entry point into AI-for-science agents",
-          "Graduate students looking for paper-reading and project directions",
-          "Builders who want to prototype research copilots or autonomous research systems"
+        whatIsDesc: "Vibe Research studies how LLM-based agents can support or automate the research loop: literature review, idea generation, experiment execution, writing, and evaluation.",
+        snapshot: "2026 Landscape Snapshot",
+        snapshotItems: [
+          "Research copilots are getting stronger through Deep Research, NotebookLM-style source grounding, and scientific workspaces such as Prism.",
+          "Autonomous research systems are maturing through AI Scientist-v2, Agent Laboratory, and EvoScientist.",
+          "Vibe Coding is becoming the execution layer for research automation, especially when agents need to inspect repos, edit files, and run experiments."
         ],
-        routeCards: "Awesome-Style Route Cards",
-        routeCardsDesc: "Pick one route based on your goal. Each route gives you a focused paper stack and a practical next action.",
-        beginnerRoute: "Beginner Route",
-        beginnerGoal: "Build a clean mental model of the field in one weekend.",
-        builderRoute: "Builder Route",
-        builderGoal: "Move from reading to building a prototype research copilot.",
-        researcherRoute: "Researcher Route",
-        researcherGoal: "Design publishable research questions and evaluate rigorously.",
-        visualMap: "Visual Route Map",
-        visualMapDesc: "A quick map from visitor intent to reading categories and concrete actions:",
-        recommendedPath: "Recommended Reading Path",
-        recommendedPathDesc: "If you are new, follow this path first:",
-        legend: "Legend",
-        legendRec: "Recommendation",
-        legendStage: "Stage",
-        curatedList: "Curated Reading List",
-        surveys: "Surveys",
-        systems: "Representative Systems",
-        ideation: "Research Ideation",
-        synthesis: "Literature Synthesis",
-        benchmark: "Benchmark and Evaluation",
-        experiment: "Experiment Execution",
-        writingReview: "Writing & Review",
-        gettingStarted: "Getting Started",
-        practicalTools: "Practical Tools",
-        featured: "Featured Projects and Repos",
-        featuredDesc: "Useful starting points if you want to move from reading to building:",
+        guides: "Guide Tracks",
+        guideTopic: "Topic",
+        guideDesc: "Description",
+        guideLink: "Link",
+        clawPark: "Claw Park",
+        clawParkDesc: "An ecosystem map for what each Claw project is building and where it fits.",
+        paperIndex: "Paper Index",
+        adjacent: "Adjacent Guides",
+        clawSection: "Claw Park Preview",
+        clawNote: "Use Claw Park when the names start to blur together. The key is to separate foundation, workspace, copilot, evolution, and autonomy layers.",
+        featured: "Featured Projects",
         contribute: "How to Contribute",
         contributeItems: [
-          "Suggest a resource via GitHub Issue template: `Resource Suggestion`",
-          "Submit updates through Pull Requests with complete metadata",
-          "Follow criteria in docs/curation-guidelines.md"
+          "Suggest a resource via the Resource Suggestion issue template.",
+          "Submit updates through Pull Requests with clear metadata.",
+          "Follow the curation guidelines in docs/curation-guidelines.md."
         ],
-        changelog: "Weekly Changelog",
-        changelogDesc: "This section tracks weekly updates so returning readers can quickly spot new additions. Full history: CHANGELOG.md",
-        principles: "Curation Principles",
-        principlesItems: [
-          "Relevant to LLM agents in scientific workflows",
-          "Representative in methodology, scale, or influence",
-          "Clear about evaluation design and claims",
-          "Useful for newcomers building practical understanding"
-        ],
+        changelog: "Recent Updates",
+        changelogText: "2026-W12: added Claw Park, Vibe Coding, Vibe Anything, and a refreshed 2026 landscape snapshot.",
         license: "License",
         licenseText: "MIT (see LICENSE)."
       },
       zh: {
         title: "Vibe Research 技术指南",
-        subtitle: "一个面向 <strong>Vibe Research</strong> 的多语言技术指南，聚焦 LLM Agent 在科学发现、研究构思、文献综合与科研评测中的代表性工作。",
-        quickstart: "30 秒快速入门",
+        subtitle: "一个面向 Vibe Research、Claw 生态导航、Vibe Coding 与周边 prompt-native 工作流的多语言指南。",
+        quickstart: "快速开始",
         quickstartSteps: [
-          "从推荐阅读路径开始，完成前 3 篇综述。",
-          "从系统 / 构思 / 评测中选择一个方向，深入阅读 2 篇论文。",
-          "使用「资源建议」模板提交 Issue，分享缺失的论文或工具。"
+          "如果你刚入门，先看 Getting Started 和 Tools & Platforms。",
+          "如果你在比较不同 Claw 项目，直接看 Claw Park。",
+          "如果你关心执行层，读完科研主线后再看 Vibe Coding。"
         ],
-        quickstartNote: "如果今天只有 30 分钟：阅读论文 #1 + #4 + #12。",
         toc: "目录",
         whatIs: "什么是 Vibe Research？",
-        whatIsDesc: "Vibe Research 关注 LLM Agent 如何支持或自动化完整科研流程：从 idea 发现、实验规划与实现，到文献综合和科研结论验证。",
-        whoFor: "适合谁？",
-        whoForItems: [
-          "希望系统入门 AI 科研 Agent 的新手",
-          "寻找论文阅读和项目方向的研究生",
-          "希望构建研究助手或自主科研系统原型的开发者"
+        whatIsDesc: "Vibe Research 研究 LLM Agent 如何支持或自动化科研闭环：文献综述、idea 生成、实验执行、论文写作与评测。",
+        snapshot: "2026 版图速览",
+        snapshotItems: [
+          "Research copilot 正在变强，Deep Research、NotebookLM 式溯源阅读和 Prism 这类科学写作空间正在加速文献综合。",
+          "自主科研系统正在成熟，AI Scientist-v2、Agent Laboratory、EvoScientist 正在把系统推进到更强的 ideation、execution 和 evaluation。",
+          "Vibe Coding 正成为研究自动化的执行层，因为 agent 越来越需要真实地读 repo、改文件和跑实验。"
         ],
-        routeCards: "路线卡片",
-        routeCardsDesc: "根据目标选择一条路线，每条路线提供聚焦的论文栈和实用下一步。",
-        beginnerRoute: "入门路线",
-        beginnerGoal: "在一个周末内建立清晰的领域心智模型。",
-        builderRoute: "构建者路线",
-        builderGoal: "从阅读过渡到构建研究助手原型。",
-        researcherRoute: "研究者路线",
-        researcherGoal: "设计可发表的研究问题并严格评估。",
-        visualMap: "可视化路线图",
-        visualMapDesc: "从访客意图到阅读类别和具体行动的快速映射：",
-        recommendedPath: "推荐阅读路径",
-        recommendedPathDesc: "如果你是新手，请按此路径开始：",
-        legend: "图例",
-        legendRec: "推荐度",
-        legendStage: "阶段",
-        curatedList: "精选阅读清单",
-        surveys: "综述",
-        systems: "代表性系统",
-        ideation: "研究构思",
-        synthesis: "文献综合",
-        benchmark: "评测与基准",
-        experiment: "实验设计与执行",
-        writingReview: "论文撰写与审稿",
-        gettingStarted: "上手实践指南",
-        practicalTools: "实用工具与平台",
-        featured: "精选项目与仓库",
-        featuredDesc: "从阅读到构建的实用起点：",
+        guides: "导览路线",
+        guideTopic: "主题",
+        guideDesc: "说明",
+        guideLink: "链接",
+        clawPark: "Claw Park",
+        clawParkDesc: "解释每个 Claw 在做什么，以及它在生态中的位置。",
+        paperIndex: "论文索引",
+        adjacent: "周边 Guide",
+        clawSection: "Claw Park 预览",
+        clawNote: "当你开始分不清各种 Claw 名字时，就看这个版块。关键是把基础层、workspace、copilot、evolution 和 autonomy 分开。",
+        featured: "重点项目",
         contribute: "如何贡献",
         contributeItems: [
-          "通过 GitHub Issue 模板「资源建议」提交资源",
-          "通过 Pull Request 提交更新并附完整元数据",
-          "遵循 docs/curation-guidelines.md 中的标准"
+          "通过 Resource Suggestion issue 模板提交资源。",
+          "通过 Pull Request 提交更新并附清晰元数据。",
+          "遵循 docs/curation-guidelines.md 中的选编标准。"
         ],
-        changelog: "每周更新",
-        changelogDesc: "本节追踪每周更新，方便回访读者快速发现新内容。完整历史：CHANGELOG.md",
-        principles: "选编原则",
-        principlesItems: [
-          "与科研工作流中的 LLM Agent 相关",
-          "在方法论、规模或影响力上具有代表性",
-          "评估设计和主张清晰",
-          "有助于新手建立实用理解"
-        ],
+        changelog: "最近更新",
+        changelogText: "2026-W12：新增 Claw Park、Vibe Coding、Vibe Anything，并刷新 2026 版图概览。",
         license: "许可证",
         licenseText: "MIT（见 LICENSE）。"
       }
     };
 
-    const papers = [
-      { title: "From Automation to Autonomy: A Survey on Large Language Models in Scientific Discovery", url: "https://arxiv.org/abs/2505.13259", type: "Survey" },
-      { title: "LLM Agents as AI Scientists: A Survey", url: "https://openreview.net/pdf?id=bfdUWy6rUA", type: "Survey" },
-      { title: "A Survey of LLM-based Scientific Agents", url: "https://arxiv.org/abs/2503.24047", type: "Survey" },
-      { title: "The Landscape of Emerging AI Agent Architectures", url: "https://arxiv.org/abs/2404.11584", type: "Survey" },
-      { title: "A Survey on LLM-based Autonomous Agents", url: "https://arxiv.org/abs/2308.11432", type: "Survey" },
-      { title: "The AI Scientist: Towards Fully Automated Open-Ended Scientific Discovery", url: "https://arxiv.org/abs/2408.06292", type: "System" },
-      { title: "The AI Scientist-v2: Workshop-Level Automated Scientific Discovery via Agentic Tree Search", url: "https://arxiv.org/abs/2504.08066", type: "System" },
-      { title: "Agent Laboratory: Using LLM Agents as Research Assistants", url: "https://arxiv.org/abs/2501.04227", type: "System" },
-      { title: "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering", url: "https://arxiv.org/abs/2405.15793", type: "System" },
-      { title: "OpenHands: An Open Platform for AI Software Engineers", url: "https://arxiv.org/abs/2407.16741", type: "Platform" },
-      { title: "ResearchAgent: Iterative Research Idea Generation over Scientific Literature", url: "https://arxiv.org/abs/2404.07738", type: "Ideation" },
-      { title: "Can LLMs Generate Novel Research Ideas? A Large-Scale Human Study", url: "https://arxiv.org/abs/2409.04109", type: "Evaluation / Ideation" },
-      { title: "Chain of Ideas: Revolutionizing Research Via Novel Idea Development", url: "https://arxiv.org/abs/2410.13185", type: "Ideation" },
-      { title: "Scideator: Human-LLM Scientific Idea Generation", url: "https://arxiv.org/abs/2409.14634", type: "Human-LLM Ideation" },
-      { title: "AI-Researcher: Multi-Agent Scientific Discovery", url: "https://arxiv.org/abs/2404.04573", type: "Ideation" },
-      { title: "Nova: Enhancing Novelty and Diversity of LLM Generated Ideas", url: "https://arxiv.org/abs/2410.14255", type: "Ideation" },
-      { title: "OpenScholar: Synthesizing Scientific Literature with Retrieval-Augmented Language Models", url: "https://arxiv.org/abs/2411.14199", type: "RAG / Synthesis" },
-      { title: "PaperQA: Retrieval-Augmented Generative Agent for Scientific Research", url: "https://arxiv.org/abs/2312.07559", type: "RAG / QA" },
-      { title: "AutoSurvey: Large Language Models Can Automatically Write Surveys", url: "https://arxiv.org/abs/2406.10252", type: "Survey Generation" },
-      { title: "ScholarCopilot: RAG for Academic Writing", url: "https://arxiv.org/abs/2504.00824", type: "RAG / Writing" },
-      { title: "RA-ISF: Iterative Self-Feedback for RAG", url: "https://arxiv.org/abs/2403.06840", type: "RAG / Reasoning" },
-      { title: "MLAgentBench: Evaluating Language Agents on ML Experimentation", url: "https://arxiv.org/abs/2310.03302", type: "Benchmark + Agent" },
-      { title: "Data Interpreter: An LLM Agent for Data Science", url: "https://arxiv.org/abs/2402.18679", type: "System" },
-      { title: "Can LLMs Provide Useful Feedback on Research Papers?", url: "https://arxiv.org/abs/2310.01783", type: "Evaluation" },
-      { title: "MARG: Multi-Agent Review Generation", url: "https://arxiv.org/abs/2401.04259", type: "System" },
-      { title: "SciMON: Scientific Inspiration Machines for Novelty", url: "https://arxiv.org/abs/2305.14259", type: "System" },
-      { title: "Automated Peer Reviewing in Paper SEA", url: "https://arxiv.org/abs/2407.12857", type: "Benchmark" },
-      { title: "ScienceAgentBench: Rigorous Assessment of Language Agents for Scientific Discovery", url: "https://arxiv.org/abs/2410.05080", type: "Benchmark" },
-      { title: "FIRE-Bench: Evaluating Agents on the Rediscovery of Scientific Insights", url: "https://arxiv.org/abs/2602.02905", type: "Benchmark" },
-      { title: "AstaBench: Rigorous Benchmarking of AI Agents with a Scientific Research Suite", url: "https://arxiv.org/abs/2510.21652", type: "Benchmark" },
-      { title: "MLE-bench: Evaluating Machine Learning Agents on ML Engineering", url: "https://arxiv.org/abs/2410.07095", type: "Benchmark" },
-      { title: "RE-Bench: Evaluating AI R&D Capabilities vs Human Experts", url: "https://arxiv.org/abs/2411.15671", type: "Benchmark" },
-      { title: "EvoScientist: Multi-Agent Evolving AI Scientists for End-to-End Scientific Discovery", url: "https://arxiv.org/abs/2603.08127", type: "System" }
+    const guideTracks = [
+      ["Getting Started", "5-min demo to full automation", "./topics/getting-started.md"],
+      ["Tools & Platforms", "Core platforms, reading tools, writing aids, experiment tools", "./topics/tools.md"],
+      ["Claw Park", "Ecosystem map for what each Claw project is doing", "./topics/claw-park.md"],
+      ["Vibe Coding", "Terminal agents, coding agents, background agents, and repo guardrails", "./topics/vibe-coding.md"],
+      ["Surveys", "Landscape and evolution of AI scientists and research agents", "./topics/surveys.md"],
+      ["Systems", "End-to-end research system design", "./topics/systems.md"],
+      ["Benchmarks", "How research agents are evaluated", "./topics/benchmarks.md"],
+      ["Vibe Anything", "Adjacent app, design, writing, slides, and ops workflows", "./topics/vibe-anything.md"]
     ];
 
-    const projects = [
-      { name: "InnoClaw", url: "https://github.com/SpectrAI-Initiative/InnoClaw" },
-      { name: "ResearchClaw", url: "https://github.com/ymx10086/ResearchClaw" },
-      { name: "FARS (Analemma)", url: "https://github.com/fars-analemma" },
-      { name: "The AI Scientist (Sakana AI)", url: "https://github.com/SakanaAI/AI-Scientist" },
-      { name: "EvoScientist", url: "https://github.com/EvoScientist/EvoScientist" },
-      { name: "Orchestra", url: "https://www.orchestra-research.com/" },
-      { name: "OpenScholar (Allen AI)", url: "https://github.com/allenai/OpenScholar" },
-      { name: "PaperQA2 (Future House)", url: "https://github.com/Future-House/paper-qa" },
-      { name: "Agent Laboratory", url: "https://github.com/SamuelSchmidgall/AgentLaboratory" },
-      { name: "OpenHands", url: "https://github.com/All-Hands-AI/OpenHands" },
-      { name: "SWE-agent (Princeton)", url: "https://github.com/princeton-nlp/SWE-agent" }
+    const clawProjects = [
+      ["OpenClaw", "General assistant platform and skill ecosystem", "Foundation framework", "https://github.com/openclaw/openclaw"],
+      ["InnoClaw", "Grounded research workspace for files, paper study, and execution", "Research workspace", "https://github.com/SpectrAI-Initiative/InnoClaw"],
+      ["ResearchClaw", "Daily research copilot for literature, notes, experiments, and writing", "Personal research copilot", "https://github.com/ymx10086/ResearchClaw"],
+      ["ScienceClaw", "Self-evolving scientific research colleague with persistent memory", "Scientific specialist", "https://github.com/beita6969/ScienceClaw"],
+      ["ScienceClaw (alt repo)", "Research-lab variant with broad agent and database coverage", "Research-lab variant", "https://github.com/Zaoqu-Liu/ScienceClaw"],
+      ["MetaClaw", "Learns from real conversations and turns them into reusable skills", "Evolution engine", "https://github.com/aiming-lab/MetaClaw"],
+      ["AutoResearchClaw", "Autonomous idea-to-paper pipeline with experiments and review", "Autonomous pipeline", "https://github.com/aiming-lab/AutoResearchClaw"],
+      ["ResearchClaw Desktop App", "Local-first PDF chat and note-taking surface", "Reading surface", "https://noietch.github.io/ResearchClaw/"]
     ];
 
-    const otherLangs = {
-      ko: { title: "Vibe Research 가이드", subtitle: "<strong>Vibe Research</strong>를 위한 다국어 가이드: 과학 발견, 연구 구상, 문헌 종합 및 과학 평가를 위한 LLM 에이전트.", quickstart: "30초 퀵스타트", quickstartSteps: ["추천 읽기 경로에서 시작하여 첫 3개 설문 조사 완료", "시스템/구상/벤치마크 중 하나를 선택하고 논문 2편 심층 읽기", "Resource Suggestion을 사용하여 누락된 논문이나 도구 공유"], quickstartNote: "오늘 30분만 있다면: 논문 #1 + #4 + #12 읽기", toc: "목차", whatIs: "Vibe Research란?", whatIsDesc: "Vibe Research는 LLM 기반 에이전트가 아이디어 발견, 실험 계획, 코드 작성, 문헌 종합, 과학적 통찰 검증 등 전체 연구 루프를 지원하거나 자동화하는 방법을 연구합니다.", whoFor: "대상", whoForItems: ["AI-for-science 에이전트에 대한 체계적인 입문을 원하는 초보자", "논문 읽기 및 프로젝트 방향을 찾는 대학원생", "연구 코파일럿 또는 자율 연구 시스템 프로토타입을 만들고 싶은 개발자"], routeCards: "라우트 카드", routeCardsDesc: "목표에 따라 하나의 라우트를 선택하세요. 각 라우트는 집중된 논문 스택과 실용적인 다음 단계를 제공합니다.", beginnerRoute: "초보자 라우트", beginnerGoal: "한 주말에 분야에 대한 깔끔한 멘탈 모델 구축", builderRoute: "빌더 라우트", builderGoal: "읽기에서 연구 코파일럿 프로토타입 구축으로 전환", researcherRoute: "연구자 라우트", researcherGoal: "게시 가능한 연구 질문 설계 및 엄격한 평가", visualMap: "시각적 라우트 맵", recommendedPath: "추천 읽기 경로", recommendedPathDesc: "새로 오셨다면 이 경로부터 시작하세요:", legend: "범례", legendRec: "추천도", legendStage: "단계", curatedList: "선별 읽기 목록", surveys: "설문 조사", systems: "대표 시스템", ideation: "연구 구상", synthesis: "문헌 종합", benchmark: "벤치마크 및 평가", featured: "추천 프로젝트", featuredDesc: "읽기에서 구축으로 전환하고 싶다면 유용한 시작점:", contribute: "기여 방법", contributeItems: ["GitHub Issue 템플릿 Resource Suggestion을 통해 리소스 제안", "완전한 메타데이터와 함께 Pull Request로 업데이트 제출", "docs/curation-guidelines.md의 기준 따르기"], changelog: "주간 변경 로그", changelogDesc: "이 섹션은 주간 업데이트를 추적하여 재방문 독자가 새로 추가된 내용을 빠르게 확인할 수 있도록 합니다.", principles: "선별 원칙", principlesItems: ["과학 워크플로우의 LLM 에이전트와 관련됨", "방법론, 규모 또는 영향력에서 대표적임", "평가 설계 및 주장이 명확함", "실용적 이해를 구축하는 초보자에게 유용함"], license: "라이선스", licenseText: "MIT (LICENSE 참조)." },
-      ja: { title: "Vibe Research ガイド", subtitle: "<strong>Vibe Research</strong>向け多言語ガイド：科学発見、研究構想、文献統合、科学評価のためのLLMエージェント。", quickstart: "30秒クイックスタート", quickstartSteps: ["推奨読書パスから始め、最初の3つのサーベイを完了", "システム/構想/ベンチマークから1つ選び、論文2本を深く読む", "Resource SuggestionでIssueを開き、不足している論文やツールを共有"], quickstartNote: "今日30分しかない場合：論文#1+#4+#12を読む", toc: "目次", whatIs: "Vibe Researchとは？", whatIsDesc: "Vibe Researchは、LLMベースのエージェントがアイデア発見、実験計画、コード作成、文献統合、科学的洞察の検証など、研究ループ全体を支援または自動化する方法を研究します。", whoFor: "対象者", whoForItems: ["AI-for-scienceエージェントへの体系的な入門を求める初心者", "論文読解とプロジェクトの方向性を探す大学院生", "研究コパイロットや自律研究システムのプロトタイプを作りたいビルダー"], routeCards: "ルートカード", routeCardsDesc: "目標に応じて1つのルートを選択してください。各ルートは焦点を絞った論文スタックと実践的な次のアクションを提供します。", beginnerRoute: "初心者ルート", beginnerGoal: "週末で分野のクリーンなメンタルモデルを構築", builderRoute: "ビルダールート", builderGoal: "読書から研究コパイロットのプロトタイプ構築へ", researcherRoute: "研究者ルート", researcherGoal: "出版可能な研究課題を設計し、厳密に評価", visualMap: "ビジュアルルートマップ", recommendedPath: "推奨読書パス", recommendedPathDesc: "初めての方はこのパスから始めてください：", legend: "凡例", legendRec: "推奨度", legendStage: "段階", curatedList: "厳選読書リスト", surveys: "サーベイ", systems: "代表システム", ideation: "研究構想", synthesis: "文献統合", benchmark: "ベンチマークと評価", featured: "注目プロジェクト", featuredDesc: "読書から構築へ移りたい場合の有用な出発点：", contribute: "貢献方法", contributeItems: ["GitHub IssueテンプレートResource Suggestionでリソースを提案", "完全なメタデータとともにPull Requestで更新を提出", "docs/curation-guidelines.mdの基準に従う"], changelog: "週間変更ログ", changelogDesc: "このセクションは週間更新を追跡し、再訪者が新規追加を素早く確認できるようにします。", principles: "選定原則", principlesItems: ["科学ワークフローにおけるLLMエージェントに関連", "方法論、規模、影響力において代表的", "評価設計と主張が明確", "初心者が実践的理解を構築するのに有用"], license: "ライセンス", licenseText: "MIT（LICENSE参照）。" },
-      de: { title: "Vibe Research Leitfaden", subtitle: "Ein kuratierter mehrsprachiger Leitfaden für <strong>Vibe Research</strong>: LLM-Agenten für wissenschaftliche Entdeckung, Forschungsplanung, Literatursynthese und wissenschaftliche Bewertung.", quickstart: "30-Sekunden-Schnellstart", quickstartSteps: ["Beginnen Sie mit dem Empfohlenen Lesepfad und beenden Sie die ersten 3 Übersichten", "Wählen Sie eine Richtung aus Systeme/Ideation/Benchmark und vertiefen Sie 2 Papiere", "Öffnen Sie ein Issue mit Resource Suggestion, um ein fehlendes Papier oder Toolkit zu teilen"], quickstartNote: "Wenn Sie heute nur 30 Minuten haben: Lesen Sie Papier #1 + #4 + #12", toc: "Inhaltsverzeichnis", whatIs: "Was ist Vibe Research?", whatIsDesc: "Vibe Research untersucht, wie LLM-basierte Agenten die gesamte Forschungsloop unterstützen oder automatisieren können: Ideenfindung, Experimentplanung, Code-Schreiben, Literatursynthese und Validierung wissenschaftlicher Erkenntnisse.", whoFor: "Für wen?", whoForItems: ["Neulinge, die einen strukturierten Einstieg in AI-for-Science-Agenten suchen", "Doktoranden, die Leserichtungen und Projektrichtungen suchen", "Entwickler, die Forschungs-Kopiloten oder autonome Forschungssysteme prototypisieren möchten"], routeCards: "Routen-Karten", routeCardsDesc: "Wählen Sie eine Route basierend auf Ihrem Ziel. Jede Route bietet einen fokussierten Papierstapel und eine praktische nächste Aktion.", beginnerRoute: "Anfänger-Route", beginnerGoal: "Ein klares mentales Modell des Feldes an einem Wochenende aufbauen", builderRoute: "Builder-Route", builderGoal: "Vom Lesen zum Bauen eines Forschungs-Kopiloten-Prototyps", researcherRoute: "Forscher-Route", researcherGoal: "Veröffentlichbare Forschungsfragen entwerfen und rigoros evaluieren", visualMap: "Visuelle Routenkarte", recommendedPath: "Empfohlener Lesepfad", recommendedPathDesc: "Wenn Sie neu sind, folgen Sie zuerst diesem Pfad:", legend: "Legende", legendRec: "Empfehlung", legendStage: "Stufe", curatedList: "Kuratierte Leseliste", surveys: "Übersichten", systems: "Repräsentative Systeme", ideation: "Forschungs-Ideation", synthesis: "Literatursynthese", benchmark: "Benchmark und Bewertung", featured: "Ausgewählte Projekte", featuredDesc: "Nützliche Ausgangspunkte, wenn Sie vom Lesen zum Bauen wechseln möchten:", contribute: "Mitwirken", contributeItems: ["Schlagen Sie eine Ressource über die GitHub-Issue-Vorlage Resource Suggestion vor", "Reichen Sie Updates über Pull Requests mit vollständigen Metadaten ein", "Befolgen Sie die Kriterien in docs/curation-guidelines.md"], changelog: "Wöchentliches Änderungsprotokoll", changelogDesc: "Dieser Abschnitt verfolgt wöchentliche Updates, damit zurückkehrende Leser schnell neue Ergänzungen erkennen können.", principles: "Kurierungsprinzipien", principlesItems: ["Relevant für LLM-Agenten in wissenschaftlichen Workflows", "Repräsentativ in Methodik, Umfang oder Einfluss", "Klar über Evaluierungsdesign und Behauptungen", "Nützlich für Neulinge beim Aufbau praktischen Verständnisses"], license: "Lizenz", licenseText: "MIT (siehe LICENSE)." },
-      fr: { title: "Vibe Research Guide", subtitle: "Un guide multilingue pour <strong>Vibe Research</strong>: agents LLM pour la découverte scientifique, l'idéation de recherche, la synthèse littéraire et l'évaluation scientifique.", quickstart: "Démarrage rapide 30 secondes", quickstartSteps: ["Commencez par le Parcours de lecture recommandé et terminez les 3 premières enquêtes", "Choisissez une direction parmi Systèmes/Idéation/Benchmark et approfondissez 2 articles", "Ouvrez une issue avec Resource Suggestion pour partager un article ou un toolkit manquant"], quickstartNote: "Si vous n'avez que 30 minutes aujourd'hui: lisez l'article #1 + #4 + #12", toc: "Table des matières", whatIs: "Qu'est-ce que Vibe Research?", whatIsDesc: "Vibe Research étudie comment les agents basés sur LLM peuvent soutenir ou automatiser la boucle de recherche complète: trouver des idées, planifier des expériences, écrire du code, synthétiser la littérature et valider les insights scientifiques.", whoFor: "Pour qui?", whoForItems: ["Les nouveaux venus qui veulent un point d'entrée structuré vers les agents IA pour la science", "Les étudiants diplômés cherchant des directions de lecture et de projet", "Les développeurs qui veulent prototyper des copilotes de recherche ou des systèmes de recherche autonomes"], routeCards: "Cartes de route", routeCardsDesc: "Choisissez une route selon votre objectif. Chaque route vous donne une pile d'articles ciblée et une prochaine action pratique.", beginnerRoute: "Route débutant", beginnerGoal: "Construire un modèle mental clair du domaine en un week-end", builderRoute: "Route constructeur", builderGoal: "Passer de la lecture à la construction d'un prototype de copilote de recherche", researcherRoute: "Route chercheur", researcherGoal: "Concevoir des questions de recherche publiables et évaluer rigoureusement", visualMap: "Carte de route visuelle", recommendedPath: "Parcours de lecture recommandé", recommendedPathDesc: "Si vous êtes nouveau, suivez d'abord ce parcours:", legend: "Légende", legendRec: "Recommandation", legendStage: "Étape", curatedList: "Liste de lecture sélectionnée", surveys: "Enquêtes", systems: "Systèmes représentatifs", ideation: "Idéation de recherche", synthesis: "Synthèse littéraire", benchmark: "Benchmark et évaluation", featured: "Projets vedettes", featuredDesc: "Points de départ utiles si vous voulez passer de la lecture à la construction:", contribute: "Comment contribuer", contributeItems: ["Suggérez une ressource via le modèle GitHub Issue Resource Suggestion", "Soumettez des mises à jour via des Pull Requests avec des métadonnées complètes", "Suivez les critères dans docs/curation-guidelines.md"], changelog: "Journal des changements hebdomadaires", changelogDesc: "Cette section suit les mises à jour hebdomadaires pour que les lecteurs de retour repèrent rapidement les nouveaux ajouts.", principles: "Principes de curation", principlesItems: ["Pertinent pour les agents LLM dans les workflows scientifiques", "Représentatif en méthodologie, échelle ou influence", "Clair sur la conception et les affirmations d'évaluation", "Utile pour les nouveaux venus construisant une compréhension pratique"], license: "Licence", licenseText: "MIT (voir LICENSE)." },
-      es: { title: "Vibe Research Guide", subtitle: "Una guía multilingüe para <strong>Vibe Research</strong>: agentes LLM para descubrimiento científico, ideación de investigación, síntesis literaria y evaluación científica.", quickstart: "Inicio rápido 30 segundos", quickstartSteps: ["Comience con la Ruta de lectura recomendada y complete las primeras 3 encuestas", "Elija una dirección de Sistemas/Ideación/Benchmark y profundice en 2 artículos", "Abra un issue con Resource Suggestion para compartir un artículo o toolkit faltante"], quickstartNote: "Si solo tiene 30 minutos hoy: lea el artículo #1 + #4 + #12", toc: "Tabla de contenidos", whatIs: "¿Qué es Vibe Research?", whatIsDesc: "Vibe Research estudia cómo los agentes basados en LLM pueden apoyar o automatizar el ciclo de investigación completo: encontrar ideas, planificar experimentos, escribir código, sintetizar literatura y validar insights científicos.", whoFor: "¿Para quién?", whoForItems: ["Recién llegados que quieren un punto de entrada estructurado a los agentes IA para la ciencia", "Estudiantes de posgrado buscando direcciones de lectura y proyecto", "Desarrolladores que quieren prototipar copilotos de investigación o sistemas de investigación autónomos"], routeCards: "Tarjetas de ruta", routeCardsDesc: "Elija una ruta según su objetivo. Cada ruta le da una pila de artículos enfocada y una siguiente acción práctica.", beginnerRoute: "Ruta principiante", beginnerGoal: "Construir un modelo mental claro del campo en un fin de semana", builderRoute: "Ruta constructor", builderGoal: "Pasar de leer a construir un prototipo de copiloto de investigación", researcherRoute: "Ruta investigador", researcherGoal: "Diseñar preguntas de investigación publicables y evaluar rigurosamente", visualMap: "Mapa de ruta visual", recommendedPath: "Ruta de lectura recomendada", recommendedPathDesc: "Si es nuevo, siga primero esta ruta:", legend: "Leyenda", legendRec: "Recomendación", legendStage: "Etapa", curatedList: "Lista de lectura seleccionada", surveys: "Encuestas", systems: "Sistemas representativos", ideation: "Ideación de investigación", synthesis: "Síntesis literaria", benchmark: "Benchmark y evaluación", featured: "Proyectos destacados", featuredDesc: "Puntos de partida útiles si quiere pasar de leer a construir:", contribute: "Cómo contribuir", contributeItems: ["Sugiera un recurso a través de la plantilla GitHub Issue Resource Suggestion", "Envíe actualizaciones a través de Pull Requests con metadatos completos", "Siga los criterios en docs/curation-guidelines.md"], changelog: "Registro de cambios semanal", changelogDesc: "Esta sección rastrea las actualizaciones semanales para que los lectores que regresan detecten rápidamente las nuevas adiciones.", principles: "Principios de curación", principlesItems: ["Relevante para agentes LLM en flujos de trabajo científicos", "Representativo en metodología, escala o influencia", "Claro sobre diseño de evaluación y afirmaciones", "Útil para recién llegados construyendo comprensión práctica"], license: "Licencia", licenseText: "MIT (ver LICENSE)." },
-      it: { title: "Vibe Research Guide", subtitle: "Una guida multilingue per <strong>Vibe Research</strong>: agenti LLM per scoperta scientifica, ideazione di ricerca, sintesi letteraria e valutazione scientifica.", quickstart: "Avvio rapido 30 secondi", quickstartSteps: ["Inizia con il Percorso di lettura consigliato e completa le prime 3 indagini", "Scegli una direzione da Sistemi/Ideazione/Benchmark e approfondisci 2 articoli", "Apri un issue con Resource Suggestion per condividere un articolo o toolkit mancante"], quickstartNote: "Se hai solo 30 minuti oggi: leggi l'articolo #1 + #4 + #12", toc: "Indice", whatIs: "Cos'è Vibe Research?", whatIsDesc: "Vibe Research studia come gli agenti basati su LLM possono supportare o automatizzare il ciclo di ricerca completo: trovare idee, pianificare esperimenti, scrivere codice, sintetizzare letteratura e validare intuizioni scientifiche.", whoFor: "Per chi?", whoForItems: ["I nuovi arrivati che vogliono un punto di ingresso strutturato negli agenti IA per la scienza", "Studenti laureati in cerca di direzioni di lettura e progetto", "Sviluppatori che vogliono prototipare copiloti di ricerca o sistemi di ricerca autonomi"], routeCards: "Schede di percorso", routeCardsDesc: "Scegli un percorso in base al tuo obiettivo. Ogni percorso ti dà una pila di articoli focalizzata e un'azione successiva pratica.", beginnerRoute: "Percorso principiante", beginnerGoal: "Costruire un modello mentale chiaro del campo in un weekend", builderRoute: "Percorso costruttore", builderGoal: "Passare dalla lettura alla costruzione di un prototipo di copilota di ricerca", researcherRoute: "Percorso ricercatore", researcherGoal: "Progettare domande di ricerca pubblicabili e valutare rigorosamente", visualMap: "Mappa del percorso visiva", recommendedPath: "Percorso di lettura consigliato", recommendedPathDesc: "Se sei nuovo, segui prima questo percorso:", legend: "Legenda", legendRec: "Raccomandazione", legendStage: "Fase", curatedList: "Lista di lettura selezionata", surveys: "Indagini", systems: "Sistemi rappresentativi", ideation: "Ideazione di ricerca", synthesis: "Sintesi letteraria", benchmark: "Benchmark e valutazione", featured: "Progetti in evidenza", featuredDesc: "Punti di partenza utili se vuoi passare dalla lettura alla costruzione:", contribute: "Come contribuire", contributeItems: ["Suggerisci una risorsa tramite il modello GitHub Issue Resource Suggestion", "Invia aggiornamenti tramite Pull Request con metadati completi", "Segui i criteri in docs/curation-guidelines.md"], changelog: "Registro delle modifiche settimanali", changelogDesc: "Questa sezione tiene traccia degli aggiornamenti settimanali in modo che i lettori che tornano individuino rapidamente le nuove aggiunte.", principles: "Principi di curazione", principlesItems: ["Rilevante per gli agenti LLM nei flussi di lavoro scientifici", "Rappresentativo in metodologia, scala o influenza", "Chiaro su progettazione e affermazioni di valutazione", "Utile per i nuovi arrivati che costruiscono comprensione pratica"], license: "Licenza", licenseText: "MIT (vedi LICENSE)." },
-      pt: { title: "Vibe Research Guide", subtitle: "Um guia multilíngue para <strong>Vibe Research</strong>: agentes LLM para descoberta científica, ideação de pesquisa, síntese literária e avaliação científica.", quickstart: "Início rápido 30 segundos", quickstartSteps: ["Comece com o Caminho de leitura recomendado e termine as primeiras 3 pesquisas", "Escolha uma direção de Sistemas/Ideação/Benchmark e aprofunde 2 artigos", "Abra um issue com Resource Suggestion para compartilhar um artigo ou toolkit faltando"], quickstartNote: "Se você só tem 30 minutos hoje: leia o artigo #1 + #4 + #12", toc: "Índice", whatIs: "O que é Vibe Research?", whatIsDesc: "Vibe Research estuda como agentes baseados em LLM podem apoiar ou automatizar o ciclo de pesquisa completo: encontrar ideias, planejar experimentos, escrever código, sintetizar literatura e validar insights científicos.", whoFor: "Para quem?", whoForItems: ["Recém-chegados que querem um ponto de entrada estruturado para agentes IA para ciência", "Estudantes de pós-graduação procurando direções de leitura e projeto", "Desenvolvedores que querem prototipar copilotos de pesquisa ou sistemas de pesquisa autônomos"], routeCards: "Cartões de rota", routeCardsDesc: "Escolha uma rota com base no seu objetivo. Cada rota oferece uma pilha de artigos focada e uma próxima ação prática.", beginnerRoute: "Rota iniciante", beginnerGoal: "Construir um modelo mental claro do campo em um fim de semana", builderRoute: "Rota construtor", builderGoal: "Passar da leitura para a construção de um protótipo de copiloto de pesquisa", researcherRoute: "Rota pesquisador", researcherGoal: "Projetar perguntas de pesquisa publicáveis e avaliar rigorosamente", visualMap: "Mapa de rota visual", recommendedPath: "Caminho de leitura recomendado", recommendedPathDesc: "Se você é novo, siga primeiro este caminho:", legend: "Legenda", legendRec: "Recomendação", legendStage: "Estágio", curatedList: "Lista de leitura selecionada", surveys: "Pesquisas", systems: "Sistemas representativos", ideation: "Ideação de pesquisa", synthesis: "Síntese literária", benchmark: "Benchmark e avaliação", featured: "Projetos em destaque", featuredDesc: "Pontos de partida úteis se você quer passar da leitura para a construção:", contribute: "Como contribuir", contributeItems: ["Sugira um recurso através do modelo GitHub Issue Resource Suggestion", "Envie atualizações através de Pull Requests com metadados completos", "Siga os critérios em docs/curation-guidelines.md"], changelog: "Registro de alterações semanal", changelogDesc: "Esta seção rastreia atualizações semanais para que leitores que retornam identifiquem rapidamente novas adições.", principles: "Princípios de curadoria", principlesItems: ["Relevante para agentes LLM em fluxos de trabalho científicos", "Representativo em metodologia, escala ou influência", "Claro sobre design de avaliação e afirmações", "Útil para recém-chegados construindo compreensão prática"], license: "Licença", licenseText: "MIT (ver LICENSE)." },
-      ar: { title: "دليل Vibe Research", subtitle: "دليل متعدد اللغات لـ <strong>Vibe Research</strong>: وكلاء LLM للاكتشاف العلمي وتوليد الأفكار البحثية وتوليف الأدبيات والتقييم العلمي.", quickstart: "بدء سريع 30 ثانية", quickstartSteps: ["ابدأ بمسار القراءة الموصى به وأكمل أول 3 استطلاعات", "اختر اتجاهًا من الأنظمة/التفكير/المعيار وتعمق في ورقتين", "افتح issue باستخدام Resource Suggestion لمشاركة ورقة أو مجموعة أدوات مفقودة"], quickstartNote: "إذا كان لديك 30 دقيقة فقط اليوم: اقرأ الورقة #1 + #4 + #12", toc: "جدول المحتويات", whatIs: "ما هو Vibe Research؟", whatIsDesc: "يدرس Vibe Research كيف يمكن لوكلاء LLM دعم أو أتمتة حلقة البحث الكاملة: إيجاد الأفكار، وتخطيط التجارب، وكتابة الكود، وتوليف الأدبيات، والتحقق من الرؤى العلمية.", whoFor: "لمن هذا؟", whoForItems: ["الوافدون الجدد الذين يريدون نقطة دخول منظمة لوكلاء الذكاء الاصطناعي للعلوم", "طلاب الدراسات العليا الباحثون عن اتجاهات القراءة والمشاريع", "المطورون الذين يريدون بناء نماذج أولية لمساعدي البحث أو أنظمة البحث المستقلة"], routeCards: "بطاقات المسار", routeCardsDesc: "اختر مسارًا بناءً على هدفك. كل مسار يمنحك مجموعة أوراق مركزية وإجراءًا عمليًا تاليًا.", beginnerRoute: "مسار المبتدئين", beginnerGoal: "بناء نموذج عقلي واضح للمجال في عطلة نهاية أسبوع واحدة", builderRoute: "مسار البناء", builderGoal: "الانتقال من القراءة إلى بناء نموذج أولي لمساعد البحث", researcherRoute: "مسار الباحث", researcherGoal: "تصميم أسئلة بحث قابلة للنشر وتقييمها بدقة", visualMap: "خريطة المسار المرئية", recommendedPath: "مسار القراءة الموصى به", recommendedPathDesc: "إذا كنت جديدًا، اتبع هذا المسار أولاً:", legend: "وسيلة الإيضاح", legendRec: "التوصية", legendStage: "المرحلة", curatedList: "قائمة القراءة المختارة", surveys: "الاستطلاعات", systems: "الأنظمة التمثيلية", ideation: "توليد الأفكار البحثية", synthesis: "توليف الأدبيات", benchmark: "المعيار والتقييم", featured: "المشاريع المميزة", featuredDesc: "نقاط انطلاق مفيدة إذا أردت الانتقال من القراءة إلى البناء:", contribute: "كيفية المساهمة", contributeItems: ["اقترح موردًا عبر قالب GitHub Issue Resource Suggestion", "أرسل التحديثات عبر Pull Requests مع بيانات وصفية كاملة", "اتبع المعايير في docs/curation-guidelines.md"], changelog: "سجل التغييرات الأسبوعي", changelogDesc: "يتتبع هذا القسم التحديثات الأسبوعية حتى يتمكن القراء العائدون من اكتشاف الإضافات الجديدة بسرعة.", principles: "مبادئ الاختيار", principlesItems: ["ذو صلة بوكلاء LLM في سير عمل علمي", "تمثيلي في المنهجية أو النطاق أو التأثير", "واضح بشأن تصميم التقييم والادعاءات", "مفيد للوافدين الجدد في بناء الفهم العملي"], license: "الترخيص", licenseText: "MIT (انظر LICENSE)." },
-      th: { title: "Vibe Research Guide", subtitle: "คู่มือหลายภาษาสำหรับ <strong>Vibe Research</strong>: เอเจนต์ LLM สำหรับการค้นพบทางวิทยาศาสตร์ การสร้างแนวคิดการวิจัย การสังเคราะห์วรรณกรรม และการประเมินทางวิทยาศาสตร์", quickstart: "เริ่มต้นเร็ว 30 วินาที", quickstartSteps: ["เริ่มต้นด้วยเส้นทางอ่านที่แนะนำและทำแบบสำรวจ 3 รายการแรกให้เสร็จ", "เลือกทิศทางจาก Systems/Ideation/Benchmark และเจาะลึก 2 เอกสาร", "เปิด issue ด้วย Resource Suggestion เพื่อแชร์เอกสารหรือชุดเครื่องมือที่ขาดหายไป"], quickstartNote: "หากวันนี้คุณมีเวลาแค่ 30 นาที: อ่านเอกสาร #1 + #4 + #12", toc: "สารบัญ", whatIs: "Vibe Research คืออะไร?", whatIsDesc: "Vibe Research ศึกษาว่าเอเจนต์ที่ใช้ LLM สามารถสนับสนุนหรือทำให้กระบวนการวิจัยทั้งหมดเป็นอัตโนมัติได้อย่างไร: การค้นหาแนวคิด การวางแผนการทดลอง การเขียนโค้ด การสังเคราะห์วรรณกรรม และการตรวจสอบข้อมูลเชิงวิทยาศาสตร์", whoFor: "สำหรับใคร?", whoForItems: ["ผู้มาใหม่ที่ต้องการจุดเริ่มต้นที่มีโครงสร้างสำหรับเอเจนต์ AI-for-science", "นักศึกษาบัณฑิตที่มองหาทิศทางการอ่านและโครงการ", "นักพัฒนาที่ต้องการสร้างต้นแบบผู้ช่วยวิจัยหรือระบบวิจัยอัตโนมัติ"], routeCards: "การ์ดเส้นทาง", routeCardsDesc: "เลือกเส้นทางตามเป้าหมายของคุณ แต่ละเส้นทางให้ชุดเอกสารที่เน้นและขั้นตอนถัดไปที่เป็นประโยชน์", beginnerRoute: "เส้นทางผู้เริ่มต้น", beginnerGoal: "สร้างแบบจำลองทางจิตที่ชัดเจนของสาขาในหนึ่งสุดสัปดาห์", builderRoute: "เส้นทางผู้สร้าง", builderGoal: "เปลี่ยนจากการอ่านไปสู่การสร้างต้นแบบผู้ช่วยวิจัย", researcherRoute: "เส้นทางนักวิจัย", researcherGoal: "ออกแบบคำถามวิจัยที่เผยแพร่ได้และประเมินอย่างเข้มงวด", visualMap: "แผนที่เส้นทางแบบภาพ", recommendedPath: "เส้นทางอ่านที่แนะนำ", recommendedPathDesc: "หากคุณเป็นมือใหม่ ให้ทำตามเส้นทางนี้ก่อน:", legend: "คำอธิบาย", legendRec: "คำแนะนำ", legendStage: "ระยะ", curatedList: "รายการอ่านที่คัดสรร", surveys: "แบบสำรวจ", systems: "ระบบตัวแทน", ideation: "การสร้างแนวคิดการวิจัย", synthesis: "การสังเคราะห์วรรณกรรม", benchmark: "การประเมินและเกณฑ์มาตรฐาน", featured: "โครงการเด่น", featuredDesc: "จุดเริ่มต้นที่มีประโยชน์หากคุณต้องการเปลี่ยนจากการอ่านไปสู่การสร้าง:", contribute: "วิธีมีส่วนร่วม", contributeItems: ["เสนอทรัพยากรผ่านเทมเพลต GitHub Issue Resource Suggestion", "ส่งการอัปเดตผ่าน Pull Requests พร้อมเมตาดาต้าแบบเต็ม", "ปฏิบัติตามเกณฑ์ใน docs/curation-guidelines.md"], changelog: "บันทึกการเปลี่ยนแปลงรายสัปดาห์", changelogDesc: "ส่วนนี้ติดตามการอัปเดตรายสัปดาห์เพื่อให้ผู้อ่านที่กลับมาสามารถพบการเพิ่มเติมใหม่ได้อย่างรวดเร็ว", principles: "หลักการคัดเลือก", principlesItems: ["เกี่ยวข้องกับเอเจนต์ LLM ในเวิร์กโฟลว์ทางวิทยาศาสตร์", "เป็นตัวแทนในระเบียบวิธี ขนาด หรืออิทธิพล", "ชัดเจนเกี่ยวกับการออกแบบการประเมินและข้อเรียกร้อง", "มีประโยชน์สำหรับผู้มาใหม่ในการสร้างความเข้าใจเชิงปฏิบัติ"], license: "ใบอนุญาต", licenseText: "MIT (ดู LICENSE)" },
-      vi: { title: "Vibe Research Guide", subtitle: "Hướng dẫn đa ngôn ngữ cho <strong>Vibe Research</strong>: tác nhân LLM cho khám phá khoa học, ý tưởng nghiên cứu, tổng hợp tài liệu và đánh giá khoa học.", quickstart: "Khởi động nhanh 30 giây", quickstartSteps: ["Bắt đầu với Đường dẫn đọc được đề xuất và hoàn thành 3 cuộc khảo sát đầu tiên", "Chọn một hướng từ Hệ thống/Ý tưởng/Benchmark và đào sâu 2 bài báo", "Mở issue bằng Resource Suggestion để chia sẻ bài báo hoặc bộ công cụ còn thiếu"], quickstartNote: "Nếu hôm nay bạn chỉ có 30 phút: đọc Bài báo #1 + #4 + #12", toc: "Mục lục", whatIs: "Vibe Research là gì?", whatIsDesc: "Vibe Research nghiên cứu cách các tác nhân dựa trên LLM có thể hỗ trợ hoặc tự động hóa vòng lặp nghiên cứu đầy đủ: tìm ý tưởng, lập kế hoạch thí nghiệm, viết mã, tổng hợp tài liệu và xác thực thông tin khoa học.", whoFor: "Dành cho ai?", whoForItems: ["Người mới muốn điểm vào có cấu trúc cho tác nhân AI cho khoa học", "Sinh viên sau đại học tìm hướng đọc và dự án", "Nhà phát triển muốn tạo nguyên mẫu trợ lý nghiên cứu hoặc hệ thống nghiên cứu tự trị"], routeCards: "Thẻ tuyến đường", routeCardsDesc: "Chọn một tuyến dựa trên mục tiêu của bạn. Mỗi tuyến cung cấp ngăn xếp bài báo tập trung và hành động tiếp theo thực tế.", beginnerRoute: "Tuyến người mới bắt đầu", beginnerGoal: "Xây dựng mô hình tinh thần rõ ràng về lĩnh vực trong một cuối tuần", builderRoute: "Tuyến người xây dựng", builderGoal: "Chuyển từ đọc sang xây dựng nguyên mẫu trợ lý nghiên cứu", researcherRoute: "Tuyến nhà nghiên cứu", researcherGoal: "Thiết kế câu hỏi nghiên cứu có thể xuất bản và đánh giá nghiêm ngặt", visualMap: "Bản đồ tuyến đường trực quan", recommendedPath: "Đường dẫn đọc được đề xuất", recommendedPathDesc: "Nếu bạn mới, hãy làm theo đường dẫn này trước:", legend: "Chú thích", legendRec: "Đề xuất", legendStage: "Giai đoạn", curatedList: "Danh sách đọc được tuyển chọn", surveys: "Khảo sát", systems: "Hệ thống đại diện", ideation: "Ý tưởng nghiên cứu", synthesis: "Tổng hợp tài liệu", benchmark: "Benchmark và đánh giá", featured: "Dự án nổi bật", featuredDesc: "Điểm khởi đầu hữu ích nếu bạn muốn chuyển từ đọc sang xây dựng:", contribute: "Cách đóng góp", contributeItems: ["Đề xuất tài nguyên qua mẫu GitHub Issue Resource Suggestion", "Gửi cập nhật qua Pull Requests với siêu dữ liệu đầy đủ", "Tuân theo tiêu chí trong docs/curation-guidelines.md"], changelog: "Nhật ký thay đổi hàng tuần", changelogDesc: "Phần này theo dõi các cập nhật hàng tuần để độc giả quay lại có thể nhanh chóng phát hiện các bổ sung mới.", principles: "Nguyên tắc tuyển chọn", principlesItems: ["Liên quan đến tác nhân LLM trong quy trình làm việc khoa học", "Đại diện về phương pháp luận, quy mô hoặc ảnh hưởng", "Rõ ràng về thiết kế đánh giá và tuyên bố", "Hữu ích cho người mới xây dựng sự hiểu biết thực tế"], license: "Giấy phép", licenseText: "MIT (xem LICENSE)." },
-      ru: { title: "Vibe Research Guide", subtitle: "Многоязычное руководство по <strong>Vibe Research</strong>: LLM-агенты для научного открытия, генерации идей, синтеза литературы и научной оценки.", quickstart: "Быстрый старт 30 секунд", quickstartSteps: ["Начните с Рекомендуемого пути чтения и завершите первые 3 обзора", "Выберите направление из Системы/Идеи/Бенчмарк и углубитесь в 2 статьи", "Откройте issue с Resource Suggestion, чтобы поделиться отсутствующей статьей или набором инструментов"], quickstartNote: "Если сегодня у вас только 30 минут: прочитайте статью #1 + #4 + #12", toc: "Содержание", whatIs: "Что такое Vibe Research?", whatIsDesc: "Vibe Research изучает, как агенты на основе LLM могут поддерживать или автоматизировать полный исследовательский цикл: поиск идей, планирование экспериментов, написание кода, синтез литературы и валидация научных выводов.", whoFor: "Для кого?", whoForItems: ["Новички, желающие структурированный вход в агентов ИИ для науки", "Аспиранты, ищущие направления чтения и проектов", "Разработчики, желающие прототипировать исследовательские копилоты или автономные исследовательские системы"], routeCards: "Карточки маршрутов", routeCardsDesc: "Выберите маршрут в соответствии с вашей целью. Каждый маршрут даёт сфокусированный стек статей и практическое следующее действие.", beginnerRoute: "Маршрут для начинающих", beginnerGoal: "Построить чёткую ментальную модель области за один уикенд", builderRoute: "Маршрут разработчика", builderGoal: "Перейти от чтения к созданию прототипа исследовательского копилота", researcherRoute: "Маршрут исследователя", researcherGoal: "Разработать публикуемые исследовательские вопросы и строго оценить", visualMap: "Визуальная карта маршрутов", recommendedPath: "Рекомендуемый путь чтения", recommendedPathDesc: "Если вы новичок, следуйте этому пути:", legend: "Легенда", legendRec: "Рекомендация", legendStage: "Этап", curatedList: "Избранный список чтения", surveys: "Обзоры", systems: "Представительные системы", ideation: "Исследовательские идеи", synthesis: "Синтез литературы", benchmark: "Бенчмарк и оценка", featured: "Избранные проекты", featuredDesc: "Полезные отправные точки, если вы хотите перейти от чтения к созданию:", contribute: "Как внести вклад", contributeItems: ["Предложите ресурс через шаблон GitHub Issue Resource Suggestion", "Отправьте обновления через Pull Requests с полными метаданными", "Следуйте критериям в docs/curation-guidelines.md"], changelog: "Еженедельный журнал изменений", changelogDesc: "Этот раздел отслеживает еженедельные обновления, чтобы возвращающиеся читатели могли быстро обнаружить новые дополнения.", principles: "Принципы отбора", principlesItems: ["Релевантно для LLM-агентов в научных рабочих процессах", "Репрезентативно по методологии, масштабу или влиянию", "Чётко о дизайне оценки и заявлениях", "Полезно для новичков, строящих практическое понимание"], license: "Лицензия", licenseText: "MIT (см. LICENSE)." }
-    };
+    const featuredProjects = [
+      ["OpenAI Deep Research", "https://openai.com/index/introducing-deep-research/"],
+      ["Gemini Deep Research", "https://blog.google/products/gemini/google-gemini-deep-research/"],
+      ["Prism", "https://openai.com/prism/"],
+      ["AI Scientist-v2", "https://arxiv.org/abs/2504.08066"],
+      ["Agent Laboratory", "https://arxiv.org/abs/2501.04227"],
+      ["EvoScientist", "https://github.com/EvoScientist/EvoScientist"]
+    ];
 
-    function getContent(lang) {
-      const t = translations[lang] || { ...translations.en, ...otherLangs[lang] };
-      const fallback = translations.en;
-      const get = (key) => (t[key] !== undefined ? t[key] : fallback[key]) || key;
+    const langButtons = ["en","zh","ko","ja","de","fr","es","it","pt","ar","th","vi","ru"];
 
-      let html = `
+    function getTranslation(lang, key) {
+      const current = translations[lang] || translations.en;
+      return current[key] !== undefined ? current[key] : translations.en[key];
+    }
+
+    function render(lang) {
+      const guideRows = guideTracks.map(([topic, desc, link]) =>
+        `<tr><td>${topic}</td><td>${desc}</td><td><a href="${link}">${link}</a></td></tr>`
+      ).join("");
+
+      const clawRows = clawProjects.map(([name, summary, role, url]) =>
+        `<tr><td><a href="${url}">${name}</a></td><td>${summary}</td><td>${role}</td></tr>`
+      ).join("");
+
+      const featured = featuredProjects.map(([name, url]) => `<li><a href="${url}">${name}</a></li>`).join("");
+
+      return `
         <div class="badges">
           <a href="https://github.com/SpectrAI-Initiative/Vibe-Research-Guide/stargazers"><img src="https://img.shields.io/github/stars/SpectrAI-Initiative/Vibe-Research-Guide?style=social" alt="stars"></a>
           <a href="https://github.com/SpectrAI-Initiative/Vibe-Research-Guide/commits/main"><img src="https://img.shields.io/github/last-commit/SpectrAI-Initiative/Vibe-Research-Guide" alt="last commit"></a>
           <a href="https://github.com/SpectrAI-Initiative/Vibe-Research-Guide/issues"><img src="https://img.shields.io/github/issues/SpectrAI-Initiative/Vibe-Research-Guide" alt="issues"></a>
           <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT">
         </div>
-        <blockquote>${get('subtitle')}</blockquote>
-        <h2>${get('quickstart')}</h2>
-        <ol>${get('quickstartSteps').map(s => `<li>${s}</li>`).join('')}</ol>
-        <p>${get('quickstartNote')}</p>
-        <h2>${get('toc')}</h2>
+        <h1>${getTranslation(lang, "title")}</h1>
+        <blockquote>${getTranslation(lang, "subtitle")}</blockquote>
+
+        <h2>${getTranslation(lang, "quickstart")}</h2>
+        <ol>${getTranslation(lang, "quickstartSteps").map(step => `<li>${step}</li>`).join("")}</ol>
+
+        <h2>${getTranslation(lang, "toc")}</h2>
         <ul>
-          <li><a href="#what">${get('whatIs')}</a></li>
-          <li><a href="#who">${get('whoFor')}</a></li>
-          <li><a href="#routes">${get('routeCards')}</a></li>
-          <li><a href="#path">${get('recommendedPath')}</a></li>
-          <li><a href="#list">${get('curatedList')}</a></li>
-          <li><a href="#featured">${get('featured')}</a></li>
-          <li><a href="#contribute">${get('contribute')}</a></li>
-          <li><a href="#principles">${get('principles')}</a></li>
-          <li><a href="#license">${get('license')}</a></li>
+          <li><a href="#what">${getTranslation(lang, "whatIs")}</a></li>
+          <li><a href="#snapshot">${getTranslation(lang, "snapshot")}</a></li>
+          <li><a href="#guides">${getTranslation(lang, "guides")}</a></li>
+          <li><a href="#claw">${getTranslation(lang, "clawSection")}</a></li>
+          <li><a href="#featured">${getTranslation(lang, "featured")}</a></li>
+          <li><a href="#contribute">${getTranslation(lang, "contribute")}</a></li>
+          <li><a href="#license">${getTranslation(lang, "license")}</a></li>
         </ul>
-        <h2 id="what">${get('whatIs')}</h2>
-        <p>${get('whatIsDesc')}</p>
-        <h2 id="who">${get('whoFor')}</h2>
-        <ul>${get('whoForItems').map(i => `<li>${i}</li>`).join('')}</ul>
-        <h2 id="routes">${get('routeCards')}</h2>
-        <p>${get('routeCardsDesc')}</p>
-        <h3>${get('beginnerRoute')}</h3>
-        <blockquote><strong>Goal:</strong> ${get('beginnerGoal')}</blockquote>
-        <ul>
-          <li>Start with: <a href="${papers[0].url}">${papers[0].title}</a>, <a href="${papers[1].url}">${papers[1].title}</a>, <a href="${papers[2].url}">${papers[2].title}</a></li>
-          <li>Then read: <a href="${papers[3].url}">${papers[3].title}</a></li>
-        </ul>
-        <h3>${get('builderRoute')}</h3>
-        <blockquote><strong>Goal:</strong> ${get('builderGoal')}</blockquote>
-        <ul>
-          <li>Start with: <a href="${papers[3].url}">${papers[3].title}</a>, <a href="${papers[4].url}">${papers[4].title}</a>, <a href="${papers[5].url}">${papers[5].title}</a></li>
-          <li>Pair with: <a href="${papers[10].url}">${papers[10].title}</a></li>
-        </ul>
-        <h3>${get('researcherRoute')}</h3>
-        <blockquote><strong>Goal:</strong> ${get('researcherGoal')}</blockquote>
-        <ul>
-          <li>Start with: <a href="${papers[6].url}">${papers[6].title}</a>, <a href="${papers[7].url}">${papers[7].title}</a>, <a href="${papers[8].url}">${papers[8].title}</a>, <a href="${papers[9].url}">${papers[9].title}</a></li>
-          <li>Evaluate with: <a href="${papers[11].url}">${papers[11].title}</a>, <a href="${papers[12].url}">${papers[12].title}</a>, <a href="${papers[13].url}">${papers[13].title}</a></li>
-        </ul>
-        <h2>${get('visualMap')}</h2>
-        <p>${get('visualMapDesc')}</p>
-        <pre><code>flowchart TD
-visitor[NewVisitor] --> chooseRoute{ChooseRoute}
-chooseRoute --> beginner[BeginnerRoute]
-chooseRoute --> builder[BuilderRoute]
-chooseRoute --> researcher[ResearcherRoute]
-beginner --> surveys[Surveys]
-builder --> synthesis[LiteratureSynthesis]
-researcher --> benchmark[BenchmarkEvaluation]</code></pre>
-        <h2 id="path">${get('recommendedPath')}</h2>
-        <p>${get('recommendedPathDesc')}</p>
-        <ol>
-          ${papers.map((p, i) => `<li><a href="${p.url}">${p.title}</a></li>`).join('')}
-        </ol>
-        <h2>${get('legend')}</h2>
-        <ul>
-          <li><strong>${get('legendRec')}</strong>: ★★★★★ (must-read), ★★★★☆ (strongly recommended)</li>
-          <li><strong>${get('legendStage')}</strong>: Beginner, Beginner-Intermediate, Intermediate</li>
-        </ul>
-        <h2 id="list">${get('curatedList')}</h2>
-        <h3>1) ${get('surveys')}</h3>
+
+        <h2 id="what">${getTranslation(lang, "whatIs")}</h2>
+        <p>${getTranslation(lang, "whatIsDesc")}</p>
+
+        <h2 id="snapshot">${getTranslation(lang, "snapshot")}</h2>
+        <ul>${getTranslation(lang, "snapshotItems").map(item => `<li>${item}</li>`).join("")}</ul>
+
+        <h2 id="guides">${getTranslation(lang, "guides")}</h2>
         <table>
-          <tr><th>#</th><th>Paper</th><th>Type</th></tr>
-          ${papers.slice(0,5).map((p,i) => `<tr><td>${i+1}</td><td><a href="${p.url}">${p.title}</a></td><td>${p.type}</td></tr>`).join('')}
+          <tr><th>${getTranslation(lang, "guideTopic")}</th><th>${getTranslation(lang, "guideDesc")}</th><th>${getTranslation(lang, "guideLink")}</th></tr>
+          ${guideRows}
         </table>
-        <h3>2) ${get('systems')}</h3>
+
+        <div class="callout">
+          <strong>${getTranslation(lang, "clawPark")}:</strong> ${getTranslation(lang, "clawParkDesc")}
+        </div>
+
+        <h2 id="claw">${getTranslation(lang, "clawSection")}</h2>
+        <p class="section-note">${getTranslation(lang, "clawNote")}</p>
         <table>
-          <tr><th>#</th><th>Paper</th><th>Type</th></tr>
-          ${papers.slice(5,10).map((p,i) => `<tr><td>${i+1}</td><td><a href="${p.url}">${p.title}</a></td><td>${p.type}</td></tr>`).join('')}
+          <tr><th>Project</th><th>What it is doing</th><th>Role</th></tr>
+          ${clawRows}
         </table>
-        <h3>3) ${get('ideation')}</h3>
-        <table>
-          <tr><th>#</th><th>Paper</th><th>Type</th></tr>
-          ${papers.slice(10,16).map((p,i) => `<tr><td>${i+1}</td><td><a href="${p.url}">${p.title}</a></td><td>${p.type}</td></tr>`).join('')}
-        </table>
-        <h3>4) ${get('synthesis')}</h3>
-        <table>
-          <tr><th>#</th><th>Paper</th><th>Type</th></tr>
-          ${papers.slice(16,21).map((p,i) => `<tr><td>${i+1}</td><td><a href="${p.url}">${p.title}</a></td><td>${p.type}</td></tr>`).join('')}
-        </table>
-        <h3>5) ${get('experiment')}</h3>
-        <table>
-          <tr><th>#</th><th>Paper</th><th>Type</th></tr>
-          ${papers.slice(21,23).map((p,i) => `<tr><td>${i+1}</td><td><a href="${p.url}">${p.title}</a></td><td>${p.type}</td></tr>`).join('')}
-        </table>
-        <h3>6) ${get('writingReview')}</h3>
-        <table>
-          <tr><th>#</th><th>Paper</th><th>Type</th></tr>
-          ${papers.slice(23,27).map((p,i) => `<tr><td>${i+1}</td><td><a href="${p.url}">${p.title}</a></td><td>${p.type}</td></tr>`).join('')}
-        </table>
-        <h3>7) ${get('benchmark')}</h3>
-        <table>
-          <tr><th>#</th><th>Paper</th><th>Type</th></tr>
-          ${papers.slice(27,32).map((p,i) => `<tr><td>${i+1}</td><td><a href="${p.url}">${p.title}</a></td><td>${p.type}</td></tr>`).join('')}
-        </table>
-        <h2 id="featured">${get('featured')}</h2>
-        <p>${get('featuredDesc')}</p>
-        <ul>
-          ${projects.map(p => `<li><a href="${p.url}">${p.name}</a></li>`).join('')}
-        </ul>
-        <h2 id="contribute">${get('contribute')}</h2>
-        <ul>${get('contributeItems').map(i => `<li>${i}</li>`).join('')}</ul>
-        <h2>${get('changelog')}</h2>
-        <p>${get('changelogDesc')}</p>
-        <p>2026-W13: Added core tools (InnoClaw, ResearchClaw, FARS, Orchestra, OpenClaw, EvoScientist); added Deep Research tools, OpenAI Prism, MCP Servers; switched all content to English; expanded to 35+ papers across 9 topic files. 2026-W12: Initial public release with hub-and-spoke architecture.</p>
-        <h2 id="principles">${get('principles')}</h2>
-        <ol>${get('principlesItems').map(i => `<li>${i}</li>`).join('')}</ol>
-        <h2 id="license">${get('license')}</h2>
-        <p>${get('licenseText')}</p>
+
+        <h2 id="featured">${getTranslation(lang, "featured")}</h2>
+        <ul>${featured}</ul>
+
+        <h2 id="contribute">${getTranslation(lang, "contribute")}</h2>
+        <ul>${getTranslation(lang, "contributeItems").map(item => `<li>${item}</li>`).join("")}</ul>
+
+        <h2>${getTranslation(lang, "changelog")}</h2>
+        <p>${getTranslation(lang, "changelogText")}</p>
+
+        <h2 id="license">${getTranslation(lang, "license")}</h2>
+        <p>${getTranslation(lang, "licenseText")}</p>
       `;
-      return html;
     }
 
-    const langs = ['en','zh','ko','ja','de','fr','es','it','pt','ar','th','vi','ru'];
-    langs.forEach(lang => {
-      const el = document.getElementById('content-' + lang);
-      if (el) {
-        const t = translations[lang] || otherLangs[lang];
-        if (t && t.title) {
-          el.innerHTML = '<h1>' + (t.title || translations.en.title) + '</h1>' + getContent(lang);
-        } else {
-          el.innerHTML = '<h1>' + translations.en.title + '</h1>' + getContent(lang);
-        }
-      }
+    langButtons.forEach((lang) => {
+      const el = document.getElementById("content-" + lang);
+      if (el) el.innerHTML = render(lang);
     });
 
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
+    document.querySelectorAll(".lang-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
         const lang = btn.dataset.lang;
-        document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
-        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
-        const content = document.getElementById('content-' + lang);
-        if (content) {
-          content.classList.add('active');
-          content.parentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+        document.querySelectorAll(".content").forEach((c) => c.classList.remove("active"));
+        document.querySelectorAll(".lang-btn").forEach((b) => b.classList.remove("active"));
+        const target = document.getElementById("content-" + lang);
+        if (target) {
+          target.classList.add("active");
+          target.parentElement.dir = lang === "ar" ? "rtl" : "ltr";
         }
-        btn.classList.add('active');
-        try { localStorage.setItem('vibe-lang', lang); } catch(e) {}
+        btn.classList.add("active");
+        try { localStorage.setItem("vibe-lang", lang); } catch (e) {}
       });
     });
 
-    const saved = localStorage.getItem('vibe-lang');
-    if (saved && document.getElementById('content-' + saved)) {
-      document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
-      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
-      document.getElementById('content-' + saved).classList.add('active');
-      document.querySelector('.lang-btn[data-lang="' + saved + '"]').classList.add('active');
-    }
+    try {
+      const saved = localStorage.getItem("vibe-lang");
+      if (saved && document.getElementById("content-" + saved)) {
+        document.querySelectorAll(".content").forEach((c) => c.classList.remove("active"));
+        document.querySelectorAll(".lang-btn").forEach((b) => b.classList.remove("active"));
+        document.getElementById("content-" + saved).classList.add("active");
+        document.querySelector('.lang-btn[data-lang="' + saved + '"]').classList.add("active");
+      }
+    } catch (e) {}
   </script>
 </body>
 </html>
