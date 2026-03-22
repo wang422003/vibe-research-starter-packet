@@ -156,14 +156,30 @@
           "Autonomous research systems are maturing through AI Scientist-v2, Agent Laboratory, and EvoScientist.",
           "Vibe Coding is becoming the execution layer for research automation, especially when agents need to inspect repos, edit files, and run experiments."
         ],
-        guides: "Guide Tracks",
+        paths: "Choose a Path",
+        pathRole: "Who you are",
+        pathStart: "Start here",
+        pathThen: "Then read",
+        pathRows: [
+          ["New to Vibe Research", "./topics/getting-started.md", "./topics/tools.md"],
+          ["Developer / Builder", "./topics/tools.md", "./topics/vibe-coding.md"],
+          ["Researcher", "./topics/surveys.md", "./topics/benchmarks.md"],
+          ["Creator / Operator", "./topics/vibe-anything.md", "./topics/vibe-coding.md"]
+        ],
+        ecosystem: "Ecosystem Snapshot",
+        ecosystemRows: [
+          ["Research copilots", "Deep Research, NotebookLM, Prism", "Fast reading, synthesis, and writing assistance"],
+          ["Research systems", "InnoClaw, ResearchClaw, FARS, AI Scientist, Agent Laboratory, EvoScientist", "End-to-end research assistance and automation"],
+          ["Claw ecosystem", "OpenClaw, ScienceClaw, MetaClaw, AutoResearchClaw", "Foundation, specialization, learning, and autonomy layers"],
+          ["Execution layer", "Claude Code, Codex, Cursor Background Agents, Copilot Coding Agent", "Repo and coding workflows that power execution"],
+          ["Adjacent tools", "v0, Lovable, Replit Agent", "Useful prototyping tools outside the research core"]
+        ],
+        guides: "Guide Map",
         guideTopic: "Topic",
         guideDesc: "Description",
         guideLink: "Link",
         clawPark: "Claw Park",
         clawParkDesc: "An ecosystem map for what each Claw project is building and where it fits.",
-        paperIndex: "Paper Index",
-        adjacent: "Adjacent Guides",
         clawSection: "Claw Park Preview",
         clawNote: "Use Claw Park when the names start to blur together. The key is to separate foundation, workspace, copilot, evolution, and autonomy layers.",
         featured: "Featured Projects",
@@ -196,14 +212,30 @@
           "自主科研系统正在成熟，AI Scientist-v2、Agent Laboratory、EvoScientist 正在把系统推进到更强的 ideation、execution 和 evaluation。",
           "Vibe Coding 正成为研究自动化的执行层，因为 agent 越来越需要真实地读 repo、改文件和跑实验。"
         ],
-        guides: "导览路线",
+        paths: "选择路径",
+        pathRole: "你是谁",
+        pathStart: "先看",
+        pathThen: "然后读",
+        pathRows: [
+          ["刚入门 Vibe Research", "./topics/getting-started.md", "./topics/tools.md"],
+          ["开发者 / Builder", "./topics/tools.md", "./topics/vibe-coding.md"],
+          ["研究者", "./topics/surveys.md", "./topics/benchmarks.md"],
+          ["Creator / Operator", "./topics/vibe-anything.md", "./topics/vibe-coding.md"]
+        ],
+        ecosystem: "生态速览",
+        ecosystemRows: [
+          ["Research copilots", "Deep Research、NotebookLM、Prism", "更快的阅读、综合和科学写作辅助"],
+          ["Research systems", "InnoClaw、ResearchClaw、FARS、AI Scientist、Agent Laboratory、EvoScientist", "端到端科研辅助和自动化"],
+          ["Claw ecosystem", "OpenClaw、ScienceClaw、MetaClaw、AutoResearchClaw", "基础层、专业层、学习层和自治层"],
+          ["Execution layer", "Claude Code、Codex、Cursor Background Agents、Copilot Coding Agent", "支撑执行的 repo 与 coding workflow 层"],
+          ["Adjacent tools", "v0、Lovable、Replit Agent", "对原型有用，但不属于科研主线"]
+        ],
+        guides: "Guide 地图",
         guideTopic: "主题",
         guideDesc: "说明",
         guideLink: "链接",
         clawPark: "Claw Park",
         clawParkDesc: "解释每个 Claw 在做什么，以及它在生态中的位置。",
-        paperIndex: "论文索引",
-        adjacent: "周边 Guide",
         clawSection: "Claw Park 预览",
         clawNote: "当你开始分不清各种 Claw 名字时，就看这个版块。关键是把基础层、workspace、copilot、evolution 和 autonomy 分开。",
         featured: "重点项目",
@@ -221,14 +253,14 @@
     };
 
     const guideTracks = [
-      ["Getting Started", "5-min demo to full automation", "./topics/getting-started.md"],
-      ["Tools & Platforms", "Core platforms, reading tools, writing aids, experiment tools", "./topics/tools.md"],
-      ["Claw Park", "Ecosystem map for what each Claw project is doing", "./topics/claw-park.md"],
-      ["Vibe Coding", "Terminal agents, coding agents, background agents, and repo guardrails", "./topics/vibe-coding.md"],
-      ["Surveys", "Landscape and evolution of AI scientists and research agents", "./topics/surveys.md"],
-      ["Systems", "End-to-end research system design", "./topics/systems.md"],
-      ["Benchmarks", "How research agents are evaluated", "./topics/benchmarks.md"],
-      ["Vibe Anything", "Adjacent app, design, writing, slides, and ops workflows", "./topics/vibe-anything.md"]
+      ["Getting Started", "Start from a quick demo and move toward full automation", "./topics/getting-started.md"],
+      ["Tools & Platforms", "Core tools, platforms, and workflow choices", "./topics/tools.md"],
+      ["Claw Park", "What each Claw project is building and where it fits", "./topics/claw-park.md"],
+      ["Vibe Coding", "Execution layer for repo work, code edits, and background agents", "./topics/vibe-coding.md"],
+      ["Surveys", "Field overview and AI scientist landscape", "./topics/surveys.md"],
+      ["Systems", "Representative end-to-end research systems", "./topics/systems.md"],
+      ["Benchmarks", "Evaluation and rediscovery-style assessment", "./topics/benchmarks.md"],
+      ["Vibe Anything", "Adjacent prompt-native workflows outside the core research track", "./topics/vibe-anything.md"]
     ];
 
     const clawProjects = [
@@ -262,6 +294,12 @@
       const guideRows = guideTracks.map(([topic, desc, link]) =>
         `<tr><td>${topic}</td><td>${desc}</td><td><a href="${link}">${link}</a></td></tr>`
       ).join("");
+      const pathRows = getTranslation(lang, "pathRows").map(([role, start, then]) =>
+        `<tr><td>${role}</td><td><a href="${start}">${start}</a></td><td><a href="${then}">${then}</a></td></tr>`
+      ).join("");
+      const ecosystemRows = getTranslation(lang, "ecosystemRows").map(([layer, examples, why]) =>
+        `<tr><td>${layer}</td><td>${examples}</td><td>${why}</td></tr>`
+      ).join("");
 
       const clawRows = clawProjects.map(([name, summary, role, url]) =>
         `<tr><td><a href="${url}">${name}</a></td><td>${summary}</td><td>${role}</td></tr>`
@@ -286,6 +324,8 @@
         <ul>
           <li><a href="#what">${getTranslation(lang, "whatIs")}</a></li>
           <li><a href="#snapshot">${getTranslation(lang, "snapshot")}</a></li>
+          <li><a href="#paths">${getTranslation(lang, "paths")}</a></li>
+          <li><a href="#ecosystem">${getTranslation(lang, "ecosystem")}</a></li>
           <li><a href="#guides">${getTranslation(lang, "guides")}</a></li>
           <li><a href="#claw">${getTranslation(lang, "clawSection")}</a></li>
           <li><a href="#featured">${getTranslation(lang, "featured")}</a></li>
@@ -298,6 +338,18 @@
 
         <h2 id="snapshot">${getTranslation(lang, "snapshot")}</h2>
         <ul>${getTranslation(lang, "snapshotItems").map(item => `<li>${item}</li>`).join("")}</ul>
+
+        <h2 id="paths">${getTranslation(lang, "paths")}</h2>
+        <table>
+          <tr><th>${getTranslation(lang, "pathRole")}</th><th>${getTranslation(lang, "pathStart")}</th><th>${getTranslation(lang, "pathThen")}</th></tr>
+          ${pathRows}
+        </table>
+
+        <h2 id="ecosystem">${getTranslation(lang, "ecosystem")}</h2>
+        <table>
+          <tr><th>Layer</th><th>Representative projects</th><th>Why it matters</th></tr>
+          ${ecosystemRows}
+        </table>
 
         <h2 id="guides">${getTranslation(lang, "guides")}</h2>
         <table>

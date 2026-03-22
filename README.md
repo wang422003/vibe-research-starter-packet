@@ -26,7 +26,7 @@
 
 Automate the research workflow with LLM Agents: literature review → idea generation → experiment execution → paper writing → peer review.
 
-This repo serves two audiences: **practitioners** (fastest way to get started) and **researchers** (track the latest advances).
+This repo is a **hub page**: start here to choose the right track, then move into the topic pages for details.
 
 <p align="center">
   <img src="files/images/_34_Vibe_Research_AI_assistant_idealiteratureexperimentcoderesultpaperLLM_based_agents__image_1.png" alt="Vibe Research: AI assistant workflow (idea → literature → experiment → code → result → paper)" width="85%">
@@ -44,7 +44,7 @@ This guide keeps **Vibe Research** as the core topic, then adds separate section
 
 ---
 
-## Quick Start
+## Choose a Path
 
 | Who you are | Start here | Then read |
 |---|---|---|
@@ -57,64 +57,32 @@ This guide keeps **Vibe Research** as the core topic, then adds separate section
 
 ---
 
-## Core Tools & Platforms
+## Ecosystem Snapshot
 
 <p align="center">
   <img src="files/images/claw_ecosystem.jpg" alt="CLAW Ecosystem - Vibe Research tools and platforms" width="90%">
 </p>
 
-| Project | Description | Link |
+| Layer | Representative projects | Why it matters |
 |---|---|---|
-| **InnoClaw** | Open-source AI research agent for scientific innovation | [GitHub](https://github.com/SpectrAI-Initiative/InnoClaw) |
-| **ResearchClaw** | Personal AI research assistant (CLI / Web / Slack) | [GitHub](https://github.com/ymx10086/ResearchClaw) |
-| **FARS (Analemma)** | Fully automated research system (Fudan MOSS team) | [GitHub](https://github.com/fars-analemma) · [Website](https://analemma.ai/) |
-| **AI-Scientist** | End-to-end research automation | [GitHub](https://github.com/SakanaAI/AI-Scientist) |
-| **AI Scientist-v2** | Tree-search upgrade for higher-autonomy scientific discovery | [Paper](https://arxiv.org/abs/2504.08066) · [GitHub](https://github.com/SakanaAI/AI-Scientist) |
-| **Agent Laboratory** | Human-in-the-loop research assistant system | [Paper](https://arxiv.org/abs/2501.04227) · [GitHub](https://github.com/SamuelSchmidgall/AgentLaboratory) |
-| **EvoScientist** | Self-evolving multi-agent AI scientist | [GitHub](https://github.com/EvoScientist/EvoScientist) |
-| **Orchestra** | AI-for-Science cloud platform | [Website](https://www.orchestra-research.com/) |
-| **OpenClaw** | Agent skill ecosystem | [Docs](https://docs.openclaw.ai/) |
+| **Research copilots** | [OpenAI Deep Research](https://openai.com/index/introducing-deep-research/) · [Gemini Deep Research](https://blog.google/products/gemini/google-gemini-deep-research/) · [NotebookLM](https://notebooklm.google/) · [Prism](https://openai.com/prism/) | Fast literature synthesis, source-grounded reading, and scientific writing assistance |
+| **Research systems** | [InnoClaw](https://github.com/SpectrAI-Initiative/InnoClaw) · [ResearchClaw](https://github.com/ymx10086/ResearchClaw) · [FARS](https://github.com/fars-analemma) · [AI Scientist](https://github.com/SakanaAI/AI-Scientist) · [Agent Laboratory](https://github.com/SamuelSchmidgall/AgentLaboratory) · [EvoScientist](https://github.com/EvoScientist/EvoScientist) | End-to-end research assistance, automation, and experiment execution |
+| **Claw ecosystem** | [OpenClaw](https://github.com/openclaw/openclaw) · [ScienceClaw](https://github.com/beita6969/ScienceClaw) · [MetaClaw](https://github.com/aiming-lab/MetaClaw) · [AutoResearchClaw](https://github.com/aiming-lab/AutoResearchClaw) | Foundation, specialization, online learning, and autonomous pipeline layers |
+| **Execution layer** | [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview) · [Codex](https://github.com/openai/codex) · [Cursor Background Agents](https://docs.cursor.com/en/background-agent) · [GitHub Copilot Coding Agent](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent) | The coding and repo workflow layer that increasingly powers research execution |
+| **Adjacent prompt-native tools** | [v0](https://v0.dev/docs) · [Lovable](https://docs.lovable.dev/) · [Replit Agent](https://docs.replit.com/replitai/agent) | Useful for prototyping, but not the core of Vibe Research |
 
-More tools & comparisons: [→ Tools & Platforms](./topics/tools.md)
+Deep dive by map instead of by list:
 
-### Research Copilots & Workspaces
-
-| Tool | Description | Link |
-|---|---|---|
-| **OpenAI Deep Research** | Multi-step web research agent for structured reports and cited synthesis | [OpenAI](https://openai.com/index/introducing-deep-research/) |
-| **Gemini Deep Research** | Google research copilot for long-form web synthesis and planning | [Google](https://blog.google/products/gemini/google-gemini-deep-research/) |
-| **NotebookLM** | Source-grounded reading workspace for paper collections, notes, and briefings | [Google](https://notebooklm.google/) |
-| **Prism** | Scientific writing workspace with AI assistance for papers, citations, and LaTeX workflows | [OpenAI](https://openai.com/prism/) |
-
-### More Claw Ecosystem Projects
-
-| Project | Description | Link |
-|---|---|---|
-| **OpenClaw** | Personal AI assistant framework that powers a broader multi-skill ecosystem | [GitHub](https://github.com/openclaw/openclaw) · [Docs](https://docs.openclaw.ai/) |
-| **ScienceClaw** | Self-evolving AI research colleague for scientific workflows | [GitHub](https://github.com/beita6969/ScienceClaw) |
-| **ScienceClaw (alt repo)** | Another research-focused ScienceClaw implementation built on the Claw ecosystem | [GitHub](https://github.com/Zaoqu-Liu/ScienceClaw) |
-| **MetaClaw** | Self-evolving AI agent framework that learns from real-world conversations | [GitHub](https://github.com/aiming-lab/MetaClaw) · [Website](https://metaclaw.bot/) |
-| **AutoResearchClaw** | Fully autonomous research pipeline for generating conference-style papers from an idea | [GitHub](https://github.com/aiming-lab/AutoResearchClaw) |
-| **ResearchClaw Desktop App** | Desktop-first AI paper reading and note-taking workflow | [Website](https://noietch.github.io/ResearchClaw/) |
-
-### Claw Park
-
-Want the ecosystem map instead of just a project list? Read [→ Claw Park](./topics/claw-park.md).
-
-| Project | What it is doing | Best for |
-|---|---|---|
-| **OpenClaw** | The base assistant platform and skill ecosystem that other Claw variants can build on | Teams that want a general agent foundation |
-| **InnoClaw** | A self-hostable research workspace for grounded chat, paper study, and research execution | Labs that want a practical research cockpit |
-| **ResearchClaw** | A personal research assistant that connects literature, notes, experiment tracking, and paper writing | Individual researchers and small teams |
-| **ScienceClaw** | A self-evolving scientific colleague focused on persistent skills and memory for research workflows | Research-heavy users who want stronger long-horizon assistance |
-| **MetaClaw** | The learning layer that turns real conversations into evolving reusable skills | Builders interested in online evolution, skill learning, and RL-style adaptation |
-| **AutoResearchClaw** | The full autonomous pipeline from idea to paper with experiments, review, and deliverables | Users testing end-to-end autonomous paper generation |
+- [→ Tools & Platforms](./topics/tools.md)
+- [→ Claw Park](./topics/claw-park.md)
+- [→ Vibe Coding](./topics/vibe-coding.md)
+- [→ Vibe Anything](./topics/vibe-anything.md)
 
 ---
 
 ## Topics
 
-### Guides
+### Core Guides
 
 | Topic | Description | Link |
 |---|---|---|
@@ -122,8 +90,9 @@ Want the ecosystem map instead of just a project list? Read [→ Claw Park](./to
 | 🧰 **Tools & Platforms** | Core platforms, literature tools, writing aids, experiment tools | [→ Tools & Platforms](./topics/tools.md) |
 | 🦞 **Claw Park** | Ecosystem map for what each Claw project is building and where it fits | [→ Claw Park](./topics/claw-park.md) |
 | 💻 **Vibe Coding** | Terminal agents, coding agents, background agents, and repo guardrails | [→ Vibe Coding](./topics/vibe-coding.md) |
+| 🎨 **Vibe Anything** | Adjacent prompt-native workflows for apps, design, writing, slides, and ops | [→ Vibe Anything](./topics/vibe-anything.md) |
 
-### Paper Index (35+ papers)
+### Research Topics (35+ papers)
 
 | Topic | Core Question | Papers | Link |
 |---|---|---|---|
@@ -135,14 +104,6 @@ Want the ecosystem map instead of just a project list? Read [→ Claw Park](./to
 | ✍️ **Writing & Review** | LLM-assisted writing & peer review | 4 | [→ Writing & Review](./topics/writing-review.md) |
 | 📊 **Benchmarks** | How to evaluate research agents | 5 | [→ Benchmarks](./topics/benchmarks.md) |
 
-### Adjacent Guides
-
-These are useful, but **not the core of Vibe Research**:
-
-| Topic | Description | Link |
-|---|---|---|
-| 🎨 **Vibe Anything** | Prompt-native workflows for apps, design, writing, slides, and ops | [→ Vibe Anything](./topics/vibe-anything.md) |
-
 ---
 
 ## Useful Resources
@@ -151,11 +112,11 @@ These are useful, but **not the core of Vibe Research**:
 
 **Awesome Lists**: [LLM Agent Survey](https://github.com/Paitesanshi/LLM-Agent-Survey) · [AI Agents](https://github.com/e2b-dev/awesome-ai-agents) · [Scientific Idea Generation](https://github.com/wjie0309/awesome-scientific-idea-generation)
 
-**Tools**: [Semantic Scholar](https://www.semanticscholar.org/) · [Elicit](https://elicit.com/) · [Consensus](https://consensus.app/) · [Connected Papers](https://www.connectedpapers.com/)
+**Search & Reading**: [Semantic Scholar](https://www.semanticscholar.org/) · [Elicit](https://elicit.com/) · [Consensus](https://consensus.app/) · [Connected Papers](https://www.connectedpapers.com/)
 
-**Vibe Coding**: [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview) · [Codex](https://github.com/openai/codex) · [Cursor Background Agents](https://docs.cursor.com/en/background-agent) · [GitHub Copilot Coding Agent](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent) · [Gemini CLI](https://github.com/google-gemini/gemini-cli)
+**Execution**: [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview) · [Codex](https://github.com/openai/codex) · [Cursor Background Agents](https://docs.cursor.com/en/background-agent) · [GitHub Copilot Coding Agent](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent) · [Gemini CLI](https://github.com/google-gemini/gemini-cli)
 
-**Vibe Anything**: [v0](https://v0.dev/docs) · [Lovable](https://docs.lovable.dev/) · [Replit Agent](https://docs.replit.com/replitai/agent) · [Figma AI](https://www.figma.com/ai/) · [Canva AI](https://www.canva.com/canva-ai/)
+**Prototyping**: [v0](https://v0.dev/docs) · [Lovable](https://docs.lovable.dev/) · [Replit Agent](https://docs.replit.com/replitai/agent) · [Figma AI](https://www.figma.com/ai/) · [Canva AI](https://www.canva.com/canva-ai/)
 
 **Conferences**: NeurIPS · ICML · ICLR · ACL · AAAI · EMNLP
 
@@ -189,10 +150,7 @@ Submit resources via [Resource Suggestion](https://github.com/SpectrAI-Initiativ
 <summary><b>Changelog</b></summary>
 
 - **2026-W13**: Added core tools & platforms (InnoClaw, ResearchClaw, FARS, Orchestra, OpenClaw, EvoScientist); added Deep Research tools, OpenAI Prism, MCP Servers; switched all content to English; expanded to 35+ papers across 9 topic files
-- **2026-W13**: Added more Claw ecosystem references, including OpenClaw GitHub, ScienceClaw repos, and the ResearchClaw desktop app
-- **2026-W13**: Added MetaClaw and AutoResearchClaw to the Claw ecosystem project references
-- **2026-W12**: Added Claw Park to explain what each Claw project is building and how the ecosystem layers fit together
-- **2026-W12**: Added 2026 landscape snapshot, research copilots/workspaces, and two new guide tracks: Vibe Coding and Vibe Anything
+- **2026-W12**: Simplified README into a cleaner hub page, added Claw Park, and aligned the guide around ecosystem maps instead of repeated project lists
 - **2026-W12**: Hub-and-spoke architecture reorganization
 - **2026-W12**: Initial public release
 
