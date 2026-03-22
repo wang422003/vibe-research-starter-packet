@@ -70,9 +70,10 @@ Agent systems and platforms purpose-built for automated scientific research:
 
 | Tool | Link | Highlights | Cost |
 |---|---|---|---|
-| OpenAI Deep Research | [website](https://openai.com/) | o3-powered multi-step reasoning, structured reports from many sources | ChatGPT Pro |
-| Gemini Deep Research | [website](https://gemini.google.com/) | Google, leverages Google Scholar, comprehensive analysis | Gemini Advanced |
+| OpenAI Deep Research | [website](https://openai.com/index/introducing-deep-research/) | Multi-step web research, structured reports, and cited synthesis | ChatGPT |
+| Gemini Deep Research | [website](https://blog.google/products/gemini/google-gemini-deep-research/) | Google research copilot for broad web synthesis and planning | Gemini |
 | Perplexity Deep Research | [website](https://www.perplexity.ai/) | Free, academic focus mode, multi-source synthesis | Free |
+| Prism | [website](https://openai.com/prism/) | Scientific writing workspace for paper drafting, citations, and LaTeX-heavy workflows | Free |
 
 ## MCP Servers for Research
 
@@ -91,7 +92,22 @@ Model Context Protocol (MCP) servers that integrate academic search into AI work
 | Writefull | [website](https://www.writefull.com/) | AI proofreading designed for academic writing | Free / Pro |
 | Paperpal | [website](https://paperpal.com/) | Backed by Springer Nature | Free / Pro |
 | Grammarly | [website](https://www.grammarly.com/) | General writing assistant with academic mode | Free |
-| OpenAI Prism | [website](https://openai.com/) | OpenAI for Science — ChatGPT embedded in a scientific text editor | Free |
+| OpenAI Prism | [website](https://openai.com/prism/) | OpenAI for Science — ChatGPT embedded in a scientific text editor | Free |
+
+## Vibe Coding for Research
+
+Research agents increasingly fail or succeed based on their **coding execution layer**: can they inspect repos, edit files safely, run experiments, and iterate on failures?
+
+| Tool | Link | Highlights | Cost |
+|---|---|---|---|
+| Claude Code | [Docs](https://docs.anthropic.com/en/docs/claude-code/overview) | Terminal-native coding agent with strong repo workflows, MCP support, and approval controls | Usage-based |
+| Codex | [GitHub](https://github.com/openai/codex) | OpenAI coding agent for local and cloud task execution | Usage-based |
+| Cursor Background Agents | [Docs](https://docs.cursor.com/en/background-agent) | Async remote agents for longer engineering tasks and parallel execution | Pro / Teams |
+| GitHub Copilot Coding Agent | [Docs](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent) | Issue-to-PR workflow directly inside GitHub | Paid GitHub plan |
+| Gemini CLI | [GitHub](https://github.com/google-gemini/gemini-cli) | Open-source terminal agent with Google Search grounding and MCP support | Free / usage-based |
+| OpenHands | [GitHub](https://github.com/All-Hands-AI/OpenHands) | Open-source full-stack agent platform with sandboxed execution | Free |
+
+More workflow detail: [→ Vibe Coding](./vibe-coding.md)
 
 ## Experiment & Code Aids
 
@@ -111,6 +127,20 @@ Model Context Protocol (MCP) servers that integrate academic search into AI work
 | Zotero + ZoteroGPT | [GitHub](https://github.com/MuiseDestiny/zotero-gpt) | GPT plugin for Zotero | Free |
 | Paperpile | [website](https://paperpile.com/) | Deep Google Docs integration | $3/mo |
 
+## Adjacent Agentic Workflows
+
+Not every useful "vibe" workflow is research. App prototyping, design iteration, slide generation, and knowledge work should stay in a separate lane so this repo does not blur core scientific automation with general-purpose creation.
+
+| Tool | Link | Highlights | Cost |
+|---|---|---|---|
+| v0 | [website](https://v0.dev/docs) | Prompt-to-UI / app generation with code export and iteration | Free / usage-based |
+| Lovable | [website](https://docs.lovable.dev/) | Product-builder workflow from prompt to deployed app with GitHub sync | Free / paid |
+| Replit Agent | [Docs](https://docs.replit.com/replitai/agent) | In-browser agent for app building, debugging, and deployment | Free / paid |
+| Figma AI | [website](https://www.figma.com/ai/) | Design ideation, Make-style prototyping, and interface generation | Paid |
+| NotebookLM | [website](https://notebooklm.google/) | Source-grounded workspace for briefs, notes, and content synthesis | Free / paid |
+
+Broader framing: [→ Vibe Anything](./vibe-anything.md)
+
 ---
 
 ## Tool Selection Guide
@@ -123,6 +153,9 @@ Model Context Protocol (MCP) servers that integrate academic search into AI work
 | **Full automated research** | FARS or AI-Scientist |
 | **Cloud, no deployment** | Orchestra |
 | **Complete research workflow** | ResearchClaw + Zotero + Cursor + W&B |
+| **Researcher who also codes** | Deep Research + Claude Code or Codex + W&B |
+| **Async issue-to-PR engineering** | Cursor Background Agents or GitHub Copilot Coding Agent |
+| **Prompt-to-app prototyping** | v0 or Lovable |
 
 ---
 

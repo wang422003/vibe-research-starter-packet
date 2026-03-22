@@ -9,6 +9,13 @@ All notable updates to this guide are documented in this file.
 - Switched all content to English as default language.
 - Expanded to 35+ papers across 9 topic files.
 
+## 2026-W12
+
+- Added a 2026 landscape snapshot to `README.md` to clarify the current split between research copilots, autonomous AI scientists, and vibe coding execution layers.
+- Added a new `topics/vibe-coding.md` guide covering terminal agents, coding agents, background agents, and repo safety patterns.
+- Added a new `topics/vibe-anything.md` guide for adjacent prompt-native workflows (apps, design, writing, slides, and ops), explicitly separated from core Vibe Research.
+- Expanded `topics/tools.md` with Prism, Vibe Coding tools, and adjacent agentic workflow references.
+
 ## 2026-W12 (Reorganization)
 
 - Restructured project to hub-and-spoke architecture inspired by [Embodied-AI-Guide](https://github.com/TianxingChen/Embodied-AI-Guide).
@@ -36,4 +43,5 @@ All notable updates to this guide are documented in this file.
 - Add project logo to `files/images/`.
 - Continue expanding papers as new work is published.
 - Add domain-specific use cases (biology, chemistry, materials science).
+- Keep Vibe Coding and Vibe Anything sections current as tools mature quickly.
 - Community contributions welcome.
