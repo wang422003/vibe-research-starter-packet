@@ -65,6 +65,21 @@ This is why "Which Claw is best?" is often the wrong question. The better questi
 
 ---
 
+## Beyond Claw: The Wider Learning Layer
+
+MetaClaw is the clearest Claw-native representative of the learning layer, but the surrounding ecosystem is now broader than Claw itself.
+
+| Outside the Claw family | What it contributes |
+|---|---|
+| [Agent Lightning](https://github.com/microsoft/agent-lightning) | General agent training with RL, automatic prompt optimization, and SFT |
+| [Agent0](https://github.com/aiming-lab/Agent0) · [AgentEvolver](https://github.com/modelscope/AgentEvolver) | Self-generated evolution loops, zero-data improvement, and agent learning from its own exploration |
+| [EvoAgentX](https://github.com/EvoAgentX/EvoAgentX) · [EvoScientist](https://github.com/EvoScientist/EvoScientist) | Workflow-level evolution and scientist-loop optimization |
+| [Acontext](https://github.com/memodb-io/Acontext) | Persistent context, memory, and reusable skills as part of agent improvement |
+
+The useful mental model is: MetaClaw shows how learning can live inside the Claw ecosystem, while the wider self-evolving-agent space shows that this is becoming a separate stack layer across the whole agent field.
+
+---
+
 ## Skills, Marketplaces, And Remote Control
 
 The broader ecosystem is no longer only project repos. It now includes a distribution and control layer around those repos:
@@ -84,7 +99,7 @@ This is not "another Claw," but it changes how Claws spread: through skills, reg
 
 ## Why OpenClaw Matters Right Now
 
-The main reason OpenClaw matters in 2026 Q1 is not just popularity. It is that the product now points toward a broader platform shape:
+The main reason OpenClaw matters in 2026 Spring is not just popularity. It is that the product now points toward a broader platform shape:
 
 1. **Gateway**: it can sit between users, chat surfaces, models, and tools.
 2. **Control layer**: it is growing a clearer dashboard / operations surface instead of only a chat shell.

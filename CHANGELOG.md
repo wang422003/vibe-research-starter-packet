@@ -2,6 +2,15 @@
 
 All notable updates to this guide are documented in this file.
 
+## 2026-W16
+
+- Added a dedicated `learning / RL / self-evolving` layer across `README.md`, including `Agent Lightning`, `Agent0`, `AgentEvolver`, `EvoAgentX`, `Acontext`, and `Awesome-Self-Evolving-Agents`.
+- Reframed the homepage map so `execution infrastructure` and `agent-improvement infrastructure` are clearly separated instead of being mixed into the same tooling bucket.
+- Updated `topics/tools.md` with a dedicated learning-layer section and new tool-selection entries for agent training, self-evolution, and persistent skill/context memory.
+- Updated `topics/vibe-coding.md` to clarify the boundary between coding-agent execution tools and the newer learning / optimization layer.
+- Updated `topics/claw-park.md` to position `MetaClaw` as the Claw-native learning layer while acknowledging the wider non-Claw self-evolving-agent ecosystem.
+- Refreshed `index.html` so the interactive landing page mirrors the new learning-layer framing and W16 update summary.
+
 ## 2026-W14
 
 - Added a `2026 Q1 Signals` section to `README.md` to capture current ecosystem shifts instead of only static background framing.

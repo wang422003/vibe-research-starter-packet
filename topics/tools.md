@@ -47,7 +47,7 @@ More ecosystem positioning: [→ Claw Park](./claw-park.md)
 
 [OpenClaw](https://docs.openclaw.ai/) is an open AI agent skill ecosystem spanning assistant, research, search, and workflow capabilities, providing extensible skill support for the platforms above.
 
-### OpenClaw In 2026 Q1
+### OpenClaw In 2026 Spring
 
 The strongest current signal is that OpenClaw is no longer just a single assistant shell:
 
@@ -127,6 +127,19 @@ One of the clearest 2026 shifts is that AI-scientist systems are no longer only 
 | **Robin** | [Announcement](https://www.futurehouse.org/research-announcements/demonstrating-end-to-end-scientific-discovery-with-robin-a-multi-agent-system) | High-signal end-to-end demonstration of multi-agent scientific discovery and validated wet-lab-style workflow claims |
 | **BixBench** | [Announcement](https://www.futurehouse.org/research-announcements/bixbench) | Signals that more realistic, domain-specific benchmarks are becoming central to evaluating research agents |
 | **Edison Scientific / Kosmos** | [Website](https://edisonscientific.com/) · [Kosmos](https://edisonscientific.com/articles/announcing-kosmos) | Shows how AI-scientist ideas are being packaged into persistent scientific-discovery platforms for real R&D teams |
+
+## Learning, RL & Self-Evolving Agents
+
+The stack is no longer only "tool-using agents." A distinct learning layer is forming around training, online improvement, skill extraction, and persistent memory.
+
+| Resource | Link | What it does | Why it matters |
+|---|---|---|---|
+| **Agent Lightning** | [GitHub](https://github.com/microsoft/agent-lightning) | Trains arbitrary agents with RL, automatic prompt optimization, and SFT with minimal code changes | Strongest current signal that agent training is becoming framework-agnostic infrastructure |
+| **Agent0** | [GitHub](https://github.com/aiming-lab/Agent0) | Zero-data self-evolving language and vision-language agents through tool-integrated reasoning | Useful reference for agents that generate their own training signal instead of relying on curated datasets |
+| **AgentEvolver** | [GitHub](https://github.com/modelscope/AgentEvolver) | End-to-end self-evolving training system with self-questioning, self-navigating, and self-attributing | Good mental model for how exploration, experience reuse, and credit assignment can be unified |
+| **EvoAgentX** | [GitHub](https://github.com/EvoAgentX/EvoAgentX) | Framework for building, evaluating, and evolving agentic workflows | Pushes the field from single-prompt tuning toward workflow-level evolution |
+| **Acontext** | [GitHub](https://github.com/memodb-io/Acontext) | Context and memory platform that turns sessions into persistent skills and reusable operating knowledge | Shows how memory and skill accumulation are becoming part of the agent-improvement stack |
+| **Awesome-Self-Evolving-Agents** | [GitHub](https://github.com/EvoAgentX/Awesome-Self-Evolving-Agents) | Survey-style map of self-evolving agents and optimization methods | Best compact overview when you want the broader literature and repo landscape, not only one framework |
 
 ## Research MCP Servers & Academic Connectors
 
@@ -211,6 +224,9 @@ Broader framing: [→ Vibe Anything](./vibe-anything.md)
 | **Scout new connectors quickly** | MCP Registry or awesome-mcp-servers |
 | **Literature RAG Q&A** | PaperQA2 |
 | **Need literature plus benchmark/code metadata** | OpenAlex Research MCP + PapersWithCode MCP |
+| **Need agent training / optimization** | Agent Lightning |
+| **Need self-evolving agent infrastructure** | Agent0 or AgentEvolver |
+| **Need persistent skill / context memory** | Acontext |
 | **Full automated research** | FARS or AI-Scientist |
 | **Cloud, no deployment** | Orchestra |
 | **Complete research workflow** | ResearchClaw + Zotero + Cursor + W&B |

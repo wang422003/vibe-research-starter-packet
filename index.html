@@ -263,8 +263,18 @@
         snapshot: "2026 Landscape Snapshot",
         snapshotItems: [
           "Research copilots are getting stronger through Deep Research, NotebookLM-style source grounding, and scientific workspaces such as Prism.",
+          "Learning, RL, and self-evolving agents are becoming a distinct stack layer through Agent Lightning, Agent0, AgentEvolver, EvoAgentX, and persistent-memory systems such as Acontext.",
           "Autonomous research systems are maturing through AI Scientist-v2, Agent Laboratory, EvoScientist, and public AI-scientist platforms such as FutureHouse Platform and Edison Scientific.",
           "Vibe Coding is becoming the execution layer for research automation, especially when agents need to inspect repos, edit files, and run experiments."
+        ],
+        learning: "Learning, RL & Self-Evolving Agents",
+        learningNote: "The stack is no longer only about agents that can use tools. A separate learning layer is emerging around training, online improvement, evolving workflows, and persistent reusable skills.",
+        learningRows: [
+          ["Agent training / optimization", "Agent Lightning", "Brings RL, automatic prompt optimization, and SFT to arbitrary agent systems with near-zero code changes."],
+          ["Zero-data self-evolution", "Agent0, AgentEvolver", "Shows how agents can generate tasks, feedback, and training signal from their own exploration."],
+          ["Workflow evolution", "EvoAgentX, EvoScientist, MetaClaw", "Pushes optimization from single prompts toward whole workflows and scientist loops."],
+          ["Skill & memory substrate", "Acontext, anthropics/skills", "Turns memory, reusable skills, and persistent context into part of the agent-improvement stack."],
+          ["Landscape map", "Awesome-Self-Evolving-Agents", "Best compact map of the broader literature and repo landscape for self-evolving agents."]
         ],
         paths: "Choose a Path",
         pathRole: "Who you are",
@@ -281,6 +291,7 @@
           ["Research copilots", "Deep Research, NotebookLM, Prism", "Fast reading, synthesis, and writing assistance"],
           ["Research systems", "InnoClaw, ResearchClaw, FARS, AI Scientist, Agent Laboratory, EvoScientist", "End-to-end research assistance and automation"],
           ["AI scientist platforms", "FutureHouse Platform, Robin, Edison Scientific, Kosmos", "Shows the field moving from papers and demos to persistent public or commercial platform surfaces"],
+          ["Learning / self-evolving layer", "Agent Lightning, Agent0, AgentEvolver, EvoAgentX, Acontext", "Turns agent training, self-generated data, evolving workflows, and persistent memory into a real stack layer"],
           ["Claw ecosystem", "OpenClaw, ScienceClaw, MetaClaw, AutoResearchClaw", "Foundation, specialization, learning, autonomy, and the growing gateway / distribution layer"],
           ["Execution layer", "Claude Code, Codex, Cursor Background Agents, Copilot Coding Agent", "Repo and coding workflows that power execution"],
           ["Adjacent tools", "v0, Lovable, Replit Agent", "Useful prototyping tools outside the research core"]
@@ -290,6 +301,7 @@
         connectorRows: [
           ["Bridge & control surfaces", "cc-connect", "Operate coding and research agents from Feishu/Lark, Slack, Telegram, and similar chat apps."],
           ["Plugin layer", "ClawHub, OpenClaw Plugin Bundles, Claude Code hooks / slash commands / subagents", "Agent ecosystems are moving toward skill marketplaces, bundle compatibility, and reusable capability packs."],
+          ["Learning / memory substrate", "Acontext, anthropics/skills", "Persistent context and reusable skills are starting to function like infrastructure for agent improvement."],
           ["Registry & discovery", "Official MCP Registry, awesome-mcp-servers, awesome-openclaw-skills", "Discovery and installation are becoming first-class parts of the ecosystem."],
           ["Research connectors", "OpenAlex Research MCP, Academia MCP, PapersWithCode MCP", "Agents can connect directly to literature graphs, code artifacts, and benchmark metadata."]
         ],
@@ -323,7 +335,7 @@
           "Follow the curation guidelines in docs/curation-guidelines.md."
         ],
         changelog: "Recent Updates",
-        changelogText: "2026-W14: added current AI-scientist platform signals and a stronger Claude Code ecosystem framing, including skills, marketplaces, routing, and multi-agent ops projects.",
+        changelogText: "2026-W16: added a dedicated learning / RL / self-evolving layer across the README map, synced the HTML landing page, and clarified the boundary between execution infrastructure and agent-improvement infrastructure.",
         license: "License",
         licenseText: "MIT (see LICENSE)."
       },
@@ -350,8 +362,18 @@
         snapshot: "2026 版图速览",
         snapshotItems: [
           "Research copilot 正在变强，Deep Research、NotebookLM 式溯源阅读和 Prism 这类科学写作空间正在加速文献综合。",
+          "Learning、RL 和 self-evolving agents 正在变成独立的一层，代表项目包括 Agent Lightning、Agent0、AgentEvolver、EvoAgentX，以及 Acontext 这类持久记忆系统。",
           "自主科研系统正在成熟，AI Scientist-v2、Agent Laboratory、EvoScientist，以及 FutureHouse Platform、Edison Scientific 这类平台化方向，正在把系统推进到更强的 ideation、execution 和 evaluation。",
           "Vibe Coding 正成为研究自动化的执行层，因为 agent 越来越需要真实地读 repo、改文件和跑实验。"
+        ],
+        learning: "Learning、RL 与自进化 Agent",
+        learningNote: "现在这条栈不再只是“会调用工具的 agent”。围绕训练、在线优化、workflow 演化和持久技能记忆，已经开始形成单独的 learning layer。",
+        learningRows: [
+          ["Agent 训练 / 优化", "Agent Lightning", "把 RL、自动 prompt 优化和 SFT 带到任意 agent 系统里，且几乎不需要大改代码。"],
+          ["零数据自进化", "Agent0、AgentEvolver", "说明 agent 可以依靠自己的探索来生成任务、反馈和训练信号。"],
+          ["Workflow 演化", "EvoAgentX、EvoScientist、MetaClaw", "把优化对象从单个 prompt 推到整条 workflow 和 scientist loop。"],
+          ["技能与记忆底座", "Acontext、anthropics/skills", "让 memory、可复用 skills 和持久 context 成为 agent 改进栈的一部分。"],
+          ["版图地图", "Awesome-Self-Evolving-Agents", "目前最适合作为 self-evolving agent 方向总览的 GitHub 地图。"]
         ],
         paths: "选择路径",
         pathRole: "你是谁",
@@ -368,6 +390,7 @@
           ["Research copilots", "Deep Research、NotebookLM、Prism", "更快的阅读、综合和科学写作辅助"],
           ["Research systems", "InnoClaw、ResearchClaw、FARS、AI Scientist、Agent Laboratory、EvoScientist", "端到端科研辅助和自动化"],
           ["AI scientist platforms", "FutureHouse Platform、Robin、Edison Scientific、Kosmos", "说明这个领域正在从论文和 demo 走向长期存在的平台和产品表面"],
+          ["Learning / self-evolving layer", "Agent Lightning、Agent0、AgentEvolver、EvoAgentX、Acontext", "把 agent 训练、自生成数据、workflow 演化和持久记忆变成真正的独立层"],
           ["Claw ecosystem", "OpenClaw、ScienceClaw、MetaClaw、AutoResearchClaw", "基础层、专业层、学习层、自治层，以及正在变强的 gateway / distribution 层"],
           ["Execution layer", "Claude Code、Codex、Cursor Background Agents、Copilot Coding Agent", "支撑执行的 repo 与 coding workflow 层"],
           ["Adjacent tools", "v0、Lovable、Replit Agent", "对原型有用，但不属于科研主线"]
@@ -377,6 +400,7 @@
         connectorRows: [
           ["Bridge & control surfaces", "cc-connect", "把 coding agent 和 research agent 放到飞书/Lark、Slack、Telegram 这类聊天界面里运行。"],
           ["Plugin layer", "ClawHub、OpenClaw Plugin Bundles、Claude Code hooks / slash commands / subagents", "agent 生态正在从单一工具变成 skill marketplace、bundle compatibility 和可复用能力包。"],
+          ["Learning / memory substrate", "Acontext、anthropics/skills", "持久 context 和可复用 skills 正在开始承担 agent 改进基础设施的角色。"],
           ["Registry & discovery", "Official MCP Registry、awesome-mcp-servers、awesome-openclaw-skills", "发现和安装外部工具，正在成为生态里的独立能力层。"],
           ["Research connectors", "OpenAlex Research MCP、Academia MCP、PapersWithCode MCP", "让 agent 直接连到文献图谱、代码资产与 benchmark 元数据。"]
         ],
@@ -410,7 +434,7 @@
           "遵循 docs/curation-guidelines.md 中的选编标准。"
         ],
         changelog: "最近更新",
-        changelogText: "2026-W14：新增当前 AI-scientist 平台信号，并补强 Claude Code 生态框架，包括 skills、marketplace、routing 和 multi-agent ops 项目。",
+        changelogText: "2026-W16：新增独立的 learning / RL / self-evolving layer，同步刷新 HTML 首页，并明确 execution infrastructure 与 agent-improvement infrastructure 的边界。",
         license: "许可证",
         licenseText: "MIT（见 LICENSE）。"
       }
@@ -441,10 +465,11 @@
     const featuredProjects = [
       ["OpenAI Deep Research", "https://openai.com/index/introducing-deep-research/"],
       ["FutureHouse Platform", "https://www.futurehouse.org/research-announcements/launching-futurehouse-platform-ai-agents?_bhlid=b2b50af9254da4cf97bbad70959795fa728b14f6"],
+      ["Agent Lightning", "https://github.com/microsoft/agent-lightning"],
+      ["Agent0", "https://github.com/aiming-lab/Agent0"],
+      ["AgentEvolver", "https://github.com/modelscope/AgentEvolver"],
+      ["Acontext", "https://github.com/memodb-io/Acontext"],
       ["anthropics/skills", "https://github.com/anthropics/skills"],
-      ["wshobson/agents", "https://github.com/wshobson/agents"],
-      ["SuperClaude Framework", "https://github.com/SuperClaude-Org/SuperClaude_Framework"],
-      ["AI Scientist-v2", "https://arxiv.org/abs/2504.08066"],
       ["EvoScientist", "https://github.com/EvoScientist/EvoScientist"]
     ];
 
@@ -469,6 +494,9 @@
         `<div class="card span-6"><span class="eyebrow">${layer}</span><p><strong>Representative:</strong> ${examples}</p><p>${why}</p></div>`
       ).join("");
       const connectorRows = getTranslation(lang, "connectorRows").map(([layer, examples, why]) =>
+        `<div class="card span-6"><span class="eyebrow">${layer}</span><p><strong>Representative:</strong> ${examples}</p><p>${why}</p></div>`
+      ).join("");
+      const learningRows = getTranslation(lang, "learningRows").map(([layer, examples, why]) =>
         `<div class="card span-6"><span class="eyebrow">${layer}</span><p><strong>Representative:</strong> ${examples}</p><p>${why}</p></div>`
       ).join("");
       const ccSignalRows = getTranslation(lang, "ccSignalRows").map(([layer, examples, why]) =>
@@ -506,6 +534,7 @@
         <ul>
           <li><a href="#what">${getTranslation(lang, "whatIs")}</a></li>
           <li><a href="#snapshot">${getTranslation(lang, "snapshot")}</a></li>
+          <li><a href="#learning">${getTranslation(lang, "learning")}</a></li>
           <li><a href="#paths">${getTranslation(lang, "paths")}</a></li>
           <li><a href="#ecosystem">${getTranslation(lang, "ecosystem")}</a></li>
           <li><a href="#connectors">${getTranslation(lang, "connectors")}</a></li>
@@ -525,6 +554,10 @@
 
         <h2 id="snapshot">${getTranslation(lang, "snapshot")}</h2>
         <ul>${getTranslation(lang, "snapshotItems").map(item => `<li>${item}</li>`).join("")}</ul>
+
+        <h2 id="learning">${getTranslation(lang, "learning")}</h2>
+        <p class="section-note">${getTranslation(lang, "learningNote")}</p>
+        <div class="grid">${learningRows}</div>
 
         <h2 id="paths">${getTranslation(lang, "paths")}</h2>
         <div class="grid">${pathRows}</div>

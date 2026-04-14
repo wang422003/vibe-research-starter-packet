@@ -47,6 +47,19 @@ The practical takeaway: if you are evaluating the execution layer for Vibe Resea
 
 ---
 
+## Execution Layer vs Learning Layer
+
+This distinction matters more now than it did a year ago:
+
+| Layer | Representative projects | What it actually improves |
+|---|---|---|
+| **Execution layer** | [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview) · [Codex](https://github.com/openai/codex) · [Cursor Background Agents](https://docs.cursor.com/en/background-agent) · [claude-task-master](https://github.com/eyaltoledano/claude-task-master) · [Repomix](https://github.com/yamadashy/repomix) | Repo work, task execution, code edits, reviews, and async engineering throughput |
+| **Learning / optimization layer** | [Agent Lightning](https://github.com/microsoft/agent-lightning) · [Agent0](https://github.com/aiming-lab/Agent0) · [AgentEvolver](https://github.com/modelscope/AgentEvolver) · [EvoAgentX](https://github.com/EvoAgentX/EvoAgentX) · [Acontext](https://github.com/memodb-io/Acontext) | Policy improvement, self-generated training signal, evolving workflows, and persistent reusable memory |
+
+The practical rule: Vibe Coding tells you whether an agent can do the work now; the learning layer tells you whether the agent can get better over repeated use.
+
+---
+
 ## Working Modes
 
 | Mode | Typical tools | When to use it | Failure mode |
